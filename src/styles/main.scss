@@ -1,0 +1,14 @@
+$bg: grey;
+
+.box {
+    background-color: $bg;
+    &__title {
+        color: #f00;
+    }
+    &__img {
+        max-width: 200px;
+    }
+    &__svg {
+        fill: #f00;
+    }
+}
