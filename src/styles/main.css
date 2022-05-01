@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,700;1,700&family=Jost:wght@400;500&display=swap");
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Jost", sans-serif;
+  color: #27300f;
+}
+
+.header {
+  max-width: 1440px;
+  margin: 0 auto 4.6rem;
+  padding: 4rem 15px 0 15px;
+  display: flex;
+  align-items: center;
+  gap: 12rem;
+}
+.header__nav {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+  gap: 4.8rem;
+}
+.header__link {
+  color: #27300f;
+  text-decoration: none;
+}
+.header__link:hover {
+  color: #d26a22;
+}
+.header__tel {
+  color: #27300f;
+  font-weight: 500;
+  text-decoration: none;
+  padding-left: 10rem;
+}
+.header__tel:hover {
+  color: #d26a22;
+}
+.header__cart {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  border: 1px solid #d26a22;
+  background-color: #d26a22;
+  background-image: url(../images/cart.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 1.7rem 1.5rem;
+  position: relative;
+}
+.header__cart:hover {
+  background-color: #27300f;
+  border: 1px solid #27300f;
+}
+.header__counter {
+  font-size: 0.8rem;
+  color: #fff;
+  position: absolute;
+  top: 0.7rem;
+  right: 0.55rem;
+}
+
+.logo {
+  display: block;
+  background-image: url(../images/logo.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 12.3rem;
+  height: 3.2rem;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.main {
+  background-image: url(../images/main.png);
+  background-size: cover;
+  background-position-x: center;
+  position: relative;
+  padding-bottom: 187px;
+  overflow-x: hidden;
+}
+.main__text {
+  padding-top: 18.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.main__item {
+  margin-left: 12rem;
+  max-width: 378px;
+  margin-top: 2rem;
+}
+.main__link {
+  margin-top: 5.7rem;
+}
+.main__flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.main__cover {
+  flex-basis: 763px;
+  height: 763px;
+  border: 1px solid rgba(39, 48, 15, 0.4);
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.main__line {
+  width: 658px;
+  height: 658px;
+  border: 1px solid rgba(39, 48, 15, 0.4);
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main__image_shadow {
+  width: 92%;
+  border-radius: 100%;
+  box-shadow: 1px 6px 20px 0 rgba(39, 48, 15, 0.2);
+}
+.main__image {
+  width: 100%;
+  height: 100%;
+}
+.main__btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  position: absolute;
+  color: #27300f;
+  text-align: left;
+}
+.main__btn:hover::before {
+  background-color: #d26a22;
+  box-shadow: 0 0 0 4px #fff, 0 0 0 5px #d26a22;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.main__btn::before {
+  content: "";
+  background-color: #27300f;
+  width: 11px;
+  height: 11px;
+  box-shadow: 0 0 0 4px #fff, 0 0 0 5px #27300f;
+  border-radius: 100%;
+  position: absolute;
+}
+.main__btn_1 {
+  top: 43px;
+  left: 67px;
+}
+.main__btn_1::before {
+  top: 26px;
+  left: 83px;
+}
+.main__btn_2 {
+  top: 192px;
+  right: 1px;
+}
+.main__btn_2::before {
+  top: 20px;
+  right: 89px;
+}
+.main__btn_3 {
+  bottom: -46px;
+  right: 244px;
+}
+.main__btn_3::before {
+  bottom: 53px;
+  right: 30px;
+}
+.main__food {
+  display: block;
+  color: rgba(39, 48, 15, 0.8);
+  line-height: 2.7rem;
+}
+.main__cucumber {
+  position: absolute;
+  top: -50px;
+  left: 681px;
+  width: 86px;
+  height: 92px;
+}
+.main__avocado {
+  position: absolute;
+  top: 43px;
+  right: -17px;
+  width: 183px;
+  height: 194px;
+}
+.main__tomato {
+  position: absolute;
+  bottom: 11.5rem;
+  right: 11.1rem;
+  width: 11rem;
+}
+.main__pepper {
+  position: absolute;
+  top: 400px;
+  left: 28px;
+  width: 86px;
+  height: 72px;
+}
+.main__beans {
+  position: absolute;
+  bottom: 166px;
+  left: 0;
+  width: 93px;
+  height: 113px;
+}
+
+.title {
+  font-family: "Cormorant", serif;
+  font-weight: 700;
+  font-size: 8rem;
+  margin: 0;
+}
+.title__span {
+  font-style: italic;
+}
+.title_block .title__span {
+  display: block;
+  line-height: 7rem;
+}
+
+.description {
+  line-height: 2.5rem;
+}
+.description_size-s {
+  font-size: 1.8rem;
+}
+
+.link {
+  color: #fff;
+  text-transform: uppercase;
+  padding: 2.4rem 4rem;
+  background-color: #d26a22;
+  box-shadow: 0 0.9rem 1rem 0.3rem rgba(207, 92, 13, 0.2);
+  text-decoration: none;
+  border-radius: 3.9rem;
+  display: inline-block;
+  letter-spacing: 0.15rem;
+}
+
+/*# sourceMappingURL=main.css.map */
