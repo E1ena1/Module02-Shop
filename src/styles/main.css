@@ -428,7 +428,8 @@ body {
 }
 .about__box {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+  gap: 25rem;
 }
 .about__text {
   padding-top: 9.5rem;
@@ -438,44 +439,38 @@ body {
   padding-left: 0;
   list-style-type: none;
   display: flex;
-  gap: 10rem;
+  gap: 9.5rem;
+  align-items: flex-end;
   font-family: "Cormorant", serif;
   font-size: 2.4rem;
   font-style: italic;
-  font-weight: 500;
+  font-weight: 700;
+  margin: 0;
 }
 .about__item {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
-.about__item_health::before {
+.about__item::before {
   content: "";
-  background-image: url("../images/fruits.svg");
   display: block;
   width: 85px;
   height: 85px;
-  border: 1px solid #27300f;
+  border: 1px solid rgba(39, 48, 15, 0.4);
   border-radius: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-bottom: 1.7rem;
+}
+.about__item_health::before {
+  background-image: url("../images/fruits.svg");
 }
 .about__item_traditions::before {
-  content: "";
-  width: 85px;
-  height: 85px;
-  border: 1px solid #27300f;
-  border-radius: 100%;
   background-image: url("../images/traditional.svg");
-  background-position: center;
 }
 .about__item_goods::before {
-  content: "";
-  width: 85px;
-  height: 85px;
-  border: 1px solid #27300f;
-  border-radius: 100%;
   background-image: url("../images/good.svg");
-  fill: #d26a22;
-  background-position: center;
 }
 
 /*# sourceMappingURL=main.css.map */
