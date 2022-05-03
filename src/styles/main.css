@@ -458,9 +458,6 @@ body {
   border: 1px solid #27300f;
   border-radius: 100%;
 }
-.about__item_traditions {
-  background-image: url("../images/traditional.svg");
-}
 .about__item_traditions::before {
   content: "";
   width: 85px;
@@ -470,9 +467,6 @@ body {
   background-image: url("../images/traditional.svg");
   background-position: center;
 }
-.about__item_goods {
-  background-image: url("../images/good.svg");
-}
 .about__item_goods::before {
   content: "";
   width: 85px;
@@ -480,6 +474,7 @@ body {
   border: 1px solid #27300f;
   border-radius: 100%;
   background-image: url("../images/good.svg");
+  fill: #d26a22;
   background-position: center;
 }
 

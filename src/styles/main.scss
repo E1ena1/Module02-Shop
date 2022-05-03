@@ -495,7 +495,6 @@ body {
             }
         }
         &_traditions {
-            background-image: url("../images/traditional.svg");
             &::before {
                 content: '';
                 width: 85px;
@@ -507,7 +506,6 @@ body {
             }
         }
         &_goods {
-            background-image: url("../images/good.svg");
             &::before {
                 content: '';
                 width: 85px;
@@ -515,6 +513,7 @@ body {
                 border: 1px solid $green;
                 border-radius: 100%;
                 background-image: url("../images/good.svg");
+                fill: $orange;
                 background-position: center;
             }
         }
