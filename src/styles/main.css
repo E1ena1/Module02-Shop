@@ -56,6 +56,7 @@ body {
 .header__cart:hover {
   background-color: #27300f;
   border: 1px solid #27300f;
+  cursor: pointer;
 }
 .header__counter {
   font-size: 0.8rem;
@@ -85,9 +86,11 @@ body {
   background-image: url(../images/main.png);
   background-size: cover;
   background-position-x: center;
+  background-repeat: no-repeat;
   position: relative;
   padding-bottom: 187px;
   overflow-x: hidden;
+  z-index: 0;
 }
 .main__text {
   padding-top: 18.4rem;
@@ -98,10 +101,10 @@ body {
 .main__item {
   margin-left: 12rem;
   max-width: 378px;
-  margin-top: 2rem;
+  margin-top: 3.8rem;
 }
 .main__link {
-  margin-top: 5.7rem;
+  margin-top: 5.1rem;
 }
 .main__flex {
   display: flex;
@@ -196,6 +199,7 @@ body {
   left: 681px;
   width: 86px;
   height: 92px;
+  z-index: -1;
 }
 .main__avocado {
   position: absolute;
@@ -203,12 +207,14 @@ body {
   right: -17px;
   width: 183px;
   height: 194px;
+  z-index: -1;
 }
 .main__tomato {
   position: absolute;
   bottom: 11.5rem;
   right: 11.1rem;
   width: 11rem;
+  z-index: -1;
 }
 .main__pepper {
   position: absolute;
@@ -216,6 +222,7 @@ body {
   left: 28px;
   width: 86px;
   height: 72px;
+  z-index: -1;
 }
 .main__beans {
   position: absolute;
@@ -240,22 +247,240 @@ body {
 }
 
 .description {
-  line-height: 2.5rem;
+  line-height: 1.5;
+  margin: 0;
 }
 .description_size-s {
   font-size: 1.8rem;
+}
+.description_size-m {
+  font-size: 2.4rem;
 }
 
 .link {
   color: #fff;
   text-transform: uppercase;
-  padding: 2.4rem 4rem;
+  padding: 2.4rem 4.2rem;
   background-color: #d26a22;
   box-shadow: 0 0.9rem 1rem 0.3rem rgba(207, 92, 13, 0.2);
   text-decoration: none;
   border-radius: 3.9rem;
   display: inline-block;
-  letter-spacing: 0.15rem;
+  letter-spacing: 0.13rem;
+}
+
+.offer {
+  background-image: url(../images/offer.png);
+  background-size: cover;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  padding-top: 1.2rem;
+  padding-bottom: 12.8rem;
+}
+.offer__text {
+  margin-top: 6.1rem;
+  max-width: 70rem;
+}
+.offer__slider {
+  overflow: hidden;
+  padding-top: 100px;
+}
+
+.swiper {
+  overflow: initial;
+}
+.swiper-slide {
+  border: 1px solid rgba(39, 48, 15, 0.4);
+  height: 518px;
+  padding: 4rem 3.7rem;
+  border-radius: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+}
+.swiper-slide:hover {
+  box-shadow: 0 0 0 2px rgba(39, 48, 15, 0.4) inset;
+  cursor: pointer;
+}
+.swiper-slide:hover .swiper-slide__hover {
+  height: 233px;
+  opacity: 1;
+  transition: 0.4s;
+}
+.swiper-slide:hover::after {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.55);
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 2rem;
+  z-index: -1;
+}
+.swiper-slide-1 {
+  background-image: url("../images/bottle-milk.png");
+}
+.swiper-slide-2 {
+  background-image: url("../images/pasta.png");
+}
+.swiper-slide-3 {
+  background-image: url("../images/steaks.png");
+}
+.swiper-slide-4 {
+  background-image: url("../images/milk.png");
+}
+.swiper-slide-5 {
+  background-image: url("../images/egg.png");
+}
+.swiper-slide-6 {
+  background-image: url("../images/cheese.png");
+}
+.swiper-slide-7 {
+  background-image: url("../images/yogurt-bluberry.png");
+}
+.swiper-slide-8 {
+  background-image: url("../images/cottage-cheese.png");
+}
+.swiper-slide-9 {
+  background-image: url("../images/mocarela.png");
+}
+.swiper-slide__title {
+  font-family: "Cormorant", serif;
+  font-weight: 700;
+  font-size: 3rem;
+  color: #27300f;
+  margin-bottom: 0;
+}
+.swiper-slide__hover {
+  height: 0;
+  opacity: 0;
+}
+.swiper-slide__text {
+  color: rgba(39, 48, 15, 0.7);
+  line-height: 1.5;
+  max-width: 263px;
+  margin-top: 2.5rem;
+  margin-bottom: 3.4rem;
+}
+.swiper-slide__link {
+  text-decoration: none;
+  color: #27300f;
+  opacity: 0.8;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 16px;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.swiper-slide__link:hover {
+  opacity: 1;
+}
+.swiper-slide__link::before {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  background-image: url("../images/plus.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.swiper-pagination {
+  display: none;
+}
+.swiper-button-prev, .swiper-button-next {
+  top: -10%;
+  opacity: 40%;
+}
+.swiper-button-prev:hover, .swiper-button-next:hover {
+  opacity: 100%;
+}
+.swiper-button-prev::after, .swiper-button-next::after {
+  display: none;
+}
+.swiper-button-prev {
+  left: initial;
+  background-image: url("../images/arrow-prev.svg");
+  background-repeat: no-repeat;
+  display: block;
+  width: 20px;
+  height: 20px;
+  right: 72px;
+}
+.swiper-button-next {
+  background-image: url("../images/arrow-next.svg");
+  background-repeat: no-repeat;
+  display: block;
+  width: 20px;
+  height: 20px;
+  right: -9px;
+}
+
+.about {
+  padding-bottom: 20rem;
+  padding-top: 3.1rem;
+}
+.about__box {
+  display: flex;
+  justify-content: space-between;
+}
+.about__text {
+  padding-top: 9.5rem;
+  max-width: 60rem;
+}
+.about__list {
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 10rem;
+  font-family: "Cormorant", serif;
+  font-size: 2.4rem;
+  font-style: italic;
+  font-weight: 500;
+}
+.about__item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.about__item_health::before {
+  content: "";
+  background-image: url("../images/fruits.svg");
+  display: block;
+  width: 85px;
+  height: 85px;
+  border: 1px solid #27300f;
+  border-radius: 100%;
+}
+.about__item_traditions {
+  background-image: url("../images/traditional.svg");
+}
+.about__item_traditions::before {
+  content: "";
+  width: 85px;
+  height: 85px;
+  border: 1px solid #27300f;
+  border-radius: 100%;
+  background-image: url("../images/traditional.svg");
+  background-position: center;
+}
+.about__item_goods {
+  background-image: url("../images/good.svg");
+}
+.about__item_goods::before {
+  content: "";
+  width: 85px;
+  height: 85px;
+  border: 1px solid #27300f;
+  border-radius: 100%;
+  background-image: url("../images/good.svg");
+  background-position: center;
 }
 
 /*# sourceMappingURL=main.css.map */
