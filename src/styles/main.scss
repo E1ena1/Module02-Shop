@@ -78,7 +78,7 @@ body {
     display: block;
     background-image: url(../images/logo.svg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     width: 12.3rem;
     height: 3.2rem;
 }
@@ -314,10 +314,10 @@ body {
         margin-top: 6.1rem;
         max-width: 70rem;
     }
-    &__slider {
-        overflow: hidden;
-        padding-top: 100px;
-    }
+}
+.slider {
+    overflow: hidden;
+    padding-top: 100px;
 }
 .swiper {
     overflow: initial;
@@ -329,30 +329,34 @@ body {
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: space-between;
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
         z-index: 0;
+        &_white {
+            justify-content: flex-end;
+            &:hover {
+                .swiper-slide__hover{
+                    height: 233px;
+                    opacity: 1;
+                    transition: .4s;
+                }
+                &::after {
+                    content: '';
+                    background-color: rgba($white, 0.55);
+                    width: calc(100% - 4px);
+                    height: calc(100% - 4px);
+                    position: absolute;
+                    top: 2px;
+                    left: 2px;
+                    border-radius: 2rem;
+                    z-index: -1;
+                }
+            }
+        }
         &:hover {
             box-shadow: 0 0 0 2px rgba(39, 48, 15, 0.4) inset;
-            cursor: pointer;
-            .swiper-slide__hover{
-                height: 233px;
-                opacity: 1;
-                transition: .4s;
-            }
-            &::after {
-                content: '';
-                background-color: rgba($white, 0.55);
-                width: calc(100% - 4px);
-                height: calc(100% - 4px);
-                position: absolute;
-                top: 2px;
-                left: 2px;
-                border-radius: 2rem;
-                z-index: -1;
-            }
         }
         &-1 {
             background-image: url("../images/bottle-milk.png");
@@ -364,10 +368,10 @@ body {
             background-image: url("../images/steaks.png");
         }
         &-4 {
-            background-image: url("../images/milk.png");
+            background-image: url("../images/bottle-milk.png");
         }
         &-5 {
-            background-image: url("../images/egg.png");
+            background-image: url("../images/catalog/egg.png");
         }
         &-6 {
             background-image: url("../images/cheese.png");
@@ -422,6 +426,21 @@ body {
                 background-repeat: no-repeat;
             }
         }
+        &__cover {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 293px;
+            text-align: center;
+        }
+        &__image {
+            height: 100%;
+        }
+        &__footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
     &-pagination {
         display: none;
@@ -455,6 +474,38 @@ body {
     }
 }
 
+.counter {
+    display: flex;
+    &__btn {
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        border: 1px solid $green;
+        border-radius: 100%;
+        background-color: transparent;
+        padding: 0;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    &__minus {
+        pointer-events: none;
+        border: 1px solid $green;
+        background-image: url("../images/minus-counter.svg");
+        background-size: 14px 14px;
+        opacity: .4;
+    }
+    &__plus {
+        background-image: url("../images/plus-counter.svg");
+        background-size: 14px 14px;
+    }
+    &__input {
+        text-align: center;
+        width: 46px;
+        border: none;
+        padding: 0;
+    }
+}
+
 .about {
     padding-bottom: 20rem;
     padding-top: 3.1rem;
@@ -462,11 +513,12 @@ body {
     &__box {
         display: flex;
         justify-content: flex-end;
-        gap: 25rem;
+        gap: 26rem;
+        margin-top: 1rem;
     }
 
     &__text {
-        padding-top: 9.5rem;
+        padding-top: 9rem;
         max-width: 60rem;
     }
 
@@ -474,10 +526,10 @@ body {
         padding-left: 0;
         list-style-type: none;
         display: flex;
-        gap: 9.5rem;
+        //gap: 9.5rem;
         align-items: flex-end;
-        font-family: "Cormorant", serif;
-        font-size: 2.4rem;
+        font-family: $font-cormorant;
+        font-size: 3rem;
         font-style: italic;
         font-weight: 700;
         margin: 0;
@@ -500,16 +552,21 @@ body {
         &_health {
             &::before {
                 background-image: url("../images/fruits.svg");
+                background-size: 43px 45px;
             }
         }
         &_traditions {
+            margin-left: 9rem;
             &::before {
                 background-image: url("../images/traditional.svg");
+                background-size: 40px 40px;
             }
         }
         &_goods {
+            margin-left: 7.1rem;
             &::before {
                 background-image: url("../images/good.svg");
+                background-size: 46px 46px;
             }
         }
     }
