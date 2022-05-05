@@ -268,6 +268,13 @@ body {
   display: inline-block;
   letter-spacing: 0.13rem;
 }
+.link_min {
+  letter-spacing: normal;
+  padding: 1.8rem 3.4rem;
+}
+.link_max {
+  padding: 2.4rem 5.2rem;
+}
 
 .offer {
   background-image: url(../images/offer.png);
@@ -292,19 +299,18 @@ body {
 }
 .swiper-slide {
   border: 1px solid rgba(39, 48, 15, 0.4);
-  height: 518px;
   padding: 4rem 3.7rem;
   border-radius: 2rem;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   z-index: 0;
 }
 .swiper-slide_white {
+  height: 518px;
+  display: flex;
+  flex-direction: column;
   justify-content: flex-end;
 }
 .swiper-slide_white:hover .swiper-slide__hover {
@@ -353,6 +359,16 @@ body {
 .swiper-slide-9 {
   background-image: url("../images/mocarela.png");
 }
+.swiper-slide__description {
+  min-height: 50px;
+  max-width: 297px;
+  line-height: 2.5rem;
+  letter-spacing: 0.05rem;
+}
+.swiper-slide__price {
+  font-size: 2.4rem;
+  margin-bottom: 3.4rem;
+}
 .swiper-slide__title {
   font-family: "Cormorant", serif;
   font-weight: 700;
@@ -398,11 +414,14 @@ body {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 293px;
+  height: 320px;
   text-align: center;
 }
 .swiper-slide__image {
   height: 100%;
+  width: 100%;
+  max-width: 351px;
+  object-fit: contain;
 }
 .swiper-slide__footer {
   display: flex;
@@ -454,6 +473,10 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
 }
+.counter__btn_min {
+  width: 40px;
+  height: 40px;
+}
 .counter__minus {
   pointer-events: none;
   border: 1px solid #27300f;
@@ -470,6 +493,9 @@ body {
   width: 46px;
   border: none;
   padding: 0;
+}
+.counter__input_min {
+  width: 3.3rem;
 }
 
 .about {
@@ -530,6 +556,55 @@ body {
 .about__item_goods::before {
   background-image: url("../images/good.svg");
   background-size: 46px 46px;
+}
+
+.trends__text {
+  padding-top: 2rem;
+}
+.trends__slider {
+  padding-top: 84px;
+}
+
+.category {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.category__item {
+  flex-basis: 230px;
+  text-align: center;
+}
+.category__link {
+  color: #27300f;
+  text-decoration: none;
+  border: 1px solid rgba(39, 48, 15, 0.5);
+  padding: 2.4rem 0;
+  border-radius: 4rem;
+  display: block;
+  font-size: 1.8rem;
+}
+.category__link:hover {
+  border: 1px solid rgba(210, 106, 34, 0.5);
+  color: #d26a22;
+}
+
+.catalog-grid__title {
+  font-size: 2.4rem;
+  font-family: "Cormorant", serif;
+  font-weight: 700;
+}
+.catalog-grid__description {
+  color: rgba(39, 48, 15, 0.7);
+  max-width: 257px;
+  line-height: 2.6rem;
+}
+.catalog-grid__footer {
+  display: flex;
+}
+.catalog-grid__price {
+  font-size: 24px;
 }
 
 /*# sourceMappingURL=main.css.map */

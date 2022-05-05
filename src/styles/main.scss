@@ -301,6 +301,13 @@ body {
         border-radius: 3.9rem;
         display: inline-block;
         letter-spacing: .13rem;
+    &_min {
+        letter-spacing: normal;
+        padding: 1.8rem 3.4rem;
+    }
+    &_max {
+        padding: 2.4rem 5.2rem;
+    }
     }
 
 .offer {
@@ -323,18 +330,17 @@ body {
     overflow: initial;
     &-slide {
         border: 1px solid rgba(39, 48, 15, 0.4);
-        height: 518px;
         padding: 4rem 3.7rem;
         border-radius: 2rem;
         box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
         z-index: 0;
         &_white {
+            height: 518px;
+            display: flex;
+            flex-direction: column;
             justify-content: flex-end;
             &:hover {
                 .swiper-slide__hover{
@@ -385,6 +391,16 @@ body {
         &-9 {
             background-image: url("../images/mocarela.png");
         }
+        &__description {
+            min-height: 50px;
+            max-width: 297px;
+            line-height: 2.5rem;
+            letter-spacing: .05rem;
+        }
+        &__price {
+            font-size: 2.4rem;
+            margin-bottom: 3.4rem;
+        }
         &__title {
             font-family: $font-cormorant;
             font-weight: 700;
@@ -430,11 +446,14 @@ body {
             position: relative;
             overflow: hidden;
             width: 100%;
-            height: 293px;
+            height: 320px;
             text-align: center;
         }
         &__image {
             height: 100%;
+            width: 100%;
+            max-width: 351px;
+            object-fit: contain;
         }
         &__footer {
             display: flex;
@@ -486,6 +505,10 @@ body {
         padding: 0;
         background-repeat: no-repeat;
         background-position: center center;
+        &_min {
+            width: 40px;
+            height: 40px;
+        }
     }
     &__minus {
         pointer-events: none;
@@ -503,6 +526,9 @@ body {
         width: 46px;
         border: none;
         padding: 0;
+        &_min {
+            width: 3.3rem;
+        }
     }
 }
 
@@ -572,7 +598,55 @@ body {
     }
 }
 
+.trends {
+    &__text {
+        padding-top: 2rem;
+    }
+    &__slider {
+        padding-top: 84px;
+    }
+}
 
-
-
+.category {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    &__item {
+        flex-basis: 230px;
+        text-align: center;
+    }
+    &__link {
+        color: $green;
+        text-decoration: none;
+        border: 1px solid rgba($green, .5);
+        padding: 2.4rem 0;
+        border-radius: 4rem;
+        display: block;
+        font-size: 1.8rem;
+        &:hover {
+            border: 1px solid rgba($orange, .5);
+            color: $orange;
+        }
+    }
+}
+.catalog-grid {
+    &__title {
+        font-size: 2.4rem;
+        font-family: $font-cormorant;
+        font-weight: 700;
+    }
+    &__description {
+        color: rgba(39, 48, 15, 0.7);
+        max-width: 257px;
+        line-height: 2.6rem;
+    }
+    &__footer {
+        display: flex;
+    }
+    &__price {
+        font-size: 24px;
+    }
+}
 
