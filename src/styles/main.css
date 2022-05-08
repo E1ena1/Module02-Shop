@@ -256,6 +256,9 @@ body {
 .description_size-m {
   font-size: 2.4rem;
 }
+.description_padding-bottom {
+  padding-bottom: 25px;
+}
 
 .link {
   color: #fff;
@@ -267,6 +270,7 @@ body {
   border-radius: 3.9rem;
   display: inline-block;
   letter-spacing: 0.13rem;
+  border: none;
 }
 .link_min {
   letter-spacing: 0.08rem;
@@ -599,6 +603,9 @@ body {
   color: #d26a22;
 }
 
+.catalog {
+  margin-bottom: 13.2rem;
+}
 .catalog__btn {
   color: rgba(39, 48, 15, 0.8);
   border: none;
@@ -606,7 +613,7 @@ body {
   display: flex;
   gap: 2rem;
   letter-spacing: 1px;
-  margin: 6rem auto 13.6rem;
+  margin: 6rem auto;
   text-transform: uppercase;
   align-items: center;
 }
@@ -653,26 +660,46 @@ body {
 }
 .catalog-grid__footer {
   display: flex;
-  margin-top: 28px;
+  margin-top: 2.8rem;
   justify-content: space-between;
 }
 .catalog-grid__price {
-  font-size: 24px;
+  font-size: 2.4rem;
   margin: 0;
 }
 
+.delivery {
+  padding-bottom: 17.3rem;
+}
+.delivery__link {
+  color: #27300f;
+}
+.delivery__left-block {
+  max-width: 605px;
+  padding-left: 54px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.delivery__right-block {
+  max-width: 508px;
+  padding-right: 1.4rem;
+}
 .delivery__payment {
   list-style-type: none;
   padding-left: 0;
   display: flex;
+  margin-top: 3rem;
+  max-width: 300px;
+  gap: 3rem;
 }
 .delivery__payment-item {
   opacity: 0.4;
 }
 .delivery__payment-item-mastercard {
   display: block;
-  width: 80px;
-  height: 80px;
+  width: 55px;
+  height: 60px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
@@ -680,8 +707,8 @@ body {
 }
 .delivery__payment-item-visa {
   display: block;
-  width: 80px;
-  height: 80px;
+  width: 75px;
+  height: 55px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
@@ -689,8 +716,8 @@ body {
 }
 .delivery__payment-item-paypal {
   display: block;
-  width: 80px;
-  height: 80px;
+  width: 86px;
+  height: 55px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
@@ -701,6 +728,70 @@ body {
 }
 .delivery__info {
   display: flex;
+  padding-top: 7rem;
+  justify-content: space-around;
+  letter-spacing: 0.07px;
+}
+.delivery__discount {
+  color: #d26a22;
+}
+
+.contact-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contact-box__text {
+  max-width: 400px;
+  flex-grow: 1;
+}
+.contact-box__form {
+  flex-basis: 587px;
+}
+
+.card {
+  border: 2px solid rgba(39, 48, 15, 0.4);
+  border-radius: 2rem;
+  padding: 3.3rem 5.5rem;
+}
+.card__title {
+  font-size: 3rem;
+  font-family: "Cormorant", serif;
+  font-weight: 700;
+  margin: 0 0 2.8rem 0;
+}
+.card__label {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+.card__input {
+  border: 1px solid rgba(39, 48, 15, 0.4);
+  padding: 2.2rem 3rem;
+  margin-bottom: 3rem;
+  display: block;
+  border-radius: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+.card__input:focus {
+  border: 1px solid #27300f;
+  outline: none;
+}
+.card__check {
+  font-size: 1.2rem;
+  color: rgba(39, 48, 15, 0.6);
+  line-height: 1.5;
+  max-width: 360px;
+}
+.card__link {
+  margin-top: 12px;
+  padding: 23px 49px 23px 50px;
+}
+.card__docs {
+  font-size: 1.2rem;
+  color: rgba(39, 48, 15, 0.6);
+  line-height: 1.5;
 }
 
 /*# sourceMappingURL=main.css.map */

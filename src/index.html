@@ -252,7 +252,7 @@
             </div>
         </div>
     </section>
-   <section class="catalog">
+   <main class="catalog">
        <div class="container">
            <h1 class="title">Каталог</h1>
            <div class="trends__text">
@@ -425,8 +425,8 @@
            </div>
            <button class="catalog__btn">Загрузить еще</button>
        </div>
-   </section>
-<section>
+   </main>
+   <section>
     <div class="delivery">
         <div class="container">
             <h1 class="title">
@@ -435,12 +435,13 @@
             </h1>
             <div class="delivery__info">
                 <div class="delivery__left-block">
-                    <p class="description description_size-s">Мы доставляем ваши заказы курьером  в специально оборудованном транспорте. </p>
-                    <p> Компания Healthly food предлагает самые удобные и быстрые способы доставки по всей стране. Посмотреть подробные условия и географию вы можете по этой ссылке</p>
+                    <p class="description description_size-s description_padding-bottom">Мы доставляем ваши заказы курьером  в специально оборудованном транспорте. </p>
+                    <p class="description description_size-s"> Компания Healthly food предлагает самые удобные и быстрые способы доставки по всей стране. Посмотреть подробные условия и географию вы&nbsp;можете по этой
+                        <a class="delivery__link" href="#">ссылке</a></p>
                 </div>
                 <div class="delivery__right-block">
-                    <p class="description">
-                        Вы можете оплатить заказ наличными или картой курьеру, либо воспользоваться функцией онлайн-оплаты и получить <span>скидку 5%.</span>
+                    <p class="description description_size-s">
+                        Вы можете оплатить заказ наличными или картой курьеру, либо воспользоваться функцией онлайн-оплаты и получить <span class="delivery__discount">скидку 5%.</span>
                     </p>
                     <ul class="delivery__payment">
                         <li class="delivery__payment-item">
@@ -459,7 +460,36 @@
     </div>
     <div class="contact">
         <div class="container">
-            
+            <div class="contact-box">
+                <div class="contact-box__item">
+                    <h1 class="title title_block">
+                        Не смогли
+                        <span class="title__span">определиться?</span>
+                    </h1>
+                    <div class="contact-box__text">
+                        <p class="description description_size-s">
+                            Если у вас остались вопросы, вы можете задать отправить нам ваши данные. Наши менеджеры свяжутся с вами в течении рабочего дня.
+                        </p>
+                        <ul>
+                            <li><a href="tel:79453425555">+7 945 342 55 55</a></li>
+                            <li><a href="mailto:healthlyfood@mail.ru">healthlyfood@mail.ru</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="contact-box__form">
+                    <div class="card">
+                        <h3 class="card__title">Свяжитесь с нами</h3>
+                        <form>
+                            <label class="card__label">Ваше имя</label>
+                            <input class="card__input" type="text" placeholder="Ваше имя">
+                            <label class="card__label">Ваш телефон</label>
+                            <input class="card__input" type="text" placeholder="Ваш телефон">
+                            <button class="link card__link" type="submit">заказать звонок</button>
+                            <p class="card__check">Нажимая на кнопку вы подтверждаете свое согласие на обработку <a class="card__docs" href="#">персональных данных.</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>

@@ -289,27 +289,31 @@ body {
         &_size-m {
             font-size: 2.4rem;
         }
+    &_padding-bottom {
+        padding-bottom: 25px;
     }
+}
 
 .link {
-        color: $white;
-        text-transform: uppercase;
-        padding: 2.4rem 4.2rem;
-        background-color: $orange;
-        box-shadow: 0 0.9rem 1rem 0.3rem ($orange, 20%);
-        text-decoration: none;
-        border-radius: 3.9rem;
-        display: inline-block;
-        letter-spacing: .13rem;
-    &_min {
-        letter-spacing: 0.08rem;
-        padding: 18px 34px;
-        font-size: 1.4rem;
-        box-shadow: 0 10px 11.31px 1.69px ($orange, 0.15)
-    }
-    &_max {
-        padding: 2.4rem 5.2rem;
-    }
+    color: $white;
+    text-transform: uppercase;
+    padding: 2.4rem 4.2rem;
+    background-color: $orange;
+    box-shadow: 0 0.9rem 1rem 0.3rem ($orange, 20%);
+    text-decoration: none;
+    border-radius: 3.9rem;
+    display: inline-block;
+    letter-spacing: .13rem;
+    border: none;
+        &_min {
+            letter-spacing: 0.08rem;
+            padding: 18px 34px;
+            font-size: 1.4rem;
+            box-shadow: 0 10px 11.31px 1.69px ($orange, 0.15)
+        }
+        &_max {
+            padding: 2.4rem 5.2rem;
+        }
     }
 
 .offer {
@@ -558,7 +562,6 @@ body {
         padding-left: 0;
         list-style-type: none;
         display: flex;
-        //gap: 9.5rem;
         align-items: flex-end;
         font-family: $font-cormorant;
         font-size: 3rem;
@@ -641,25 +644,29 @@ body {
     }
 }
 
-.catalog__btn {
-    color: rgba($green, .8);
-    border: none;
-    background-color: transparent;
-    display: flex;
-    gap: 2rem;
-    letter-spacing: 1px;
-    margin: 6rem auto 13.6rem;
-    text-transform: uppercase;
-    align-items: center;
-    &::before{
-        content: "";
-        display: block;
-        width: 25px;
-        height: 25px;
-        background-image: url("../images/refresh.svg");
-        opacity: 0.8;
+.catalog {
+    margin-bottom: 13.2rem;
+    &__btn {
+        color: rgba($green, .8);
+        border: none;
+        background-color: transparent;
+        display: flex;
+        gap: 2rem;
+        letter-spacing: 1px;
+        margin: 6rem auto;
+        text-transform: uppercase;
+        align-items: center;
+        &::before{
+            content: "";
+            display: block;
+            width: 25px;
+            height: 25px;
+            background-image: url("../images/refresh.svg");
+            opacity: 0.8;
+        }
     }
 }
+
 
 .catalog-grid {
     display: grid;
@@ -694,26 +701,44 @@ body {
     }
     &__footer {
         display: flex;
-        margin-top: 28px;
+        margin-top: 2.8rem;
         justify-content: space-between;
     }
     &__price {
-        font-size: 24px;
+        font-size: 2.4rem;
         margin: 0;
     }
 }
 
 .delivery {
+    padding-bottom: 17.3rem;
+    &__link {
+        color: $green;
+    }
+    &__left-block {
+        max-width: 605px;
+        padding-left: 54px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    &__right-block {
+        max-width: 508px;
+        padding-right: 1.4rem;
+    }
     &__payment {
         list-style-type: none;
         padding-left: 0;
         display: flex;
+        margin-top: 3rem;
+        max-width: 300px;
+        gap: 3rem;
         &-item {
             opacity: 0.4;
             &-mastercard {
                 display: block;
-                width: 80px;
-                height: 80px;
+                width: 55px;
+                height: 60px;
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center center;
@@ -721,8 +746,8 @@ body {
             }
             &-visa {
                 display: block;
-                width: 80px;
-                height: 80px;
+                width: 75px;
+                height: 55px;
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center center;
@@ -730,8 +755,8 @@ body {
             }
             &-paypal {
                 display: block;
-                width: 80px;
-                height: 80px;
+                width: 86px;
+                height: 55px;
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center center;
@@ -741,9 +766,75 @@ body {
                 opacity: 1;
             }
         }
-
     }
     &__info {
         display: flex;
+        padding-top: 7rem;
+        justify-content: space-around;
+        letter-spacing: 0.07px;
+    }
+    &__discount {
+        color: $orange;
     }
 }
+
+.contact {
+    &-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &__text {
+            max-width: 400px;
+            flex-grow: 1;
+        }
+        &__form {
+            flex-basis: 587px;
+        }
+    }
+}
+.card {
+    border: 2px solid rgba($green, .4);
+    border-radius: 2rem;
+    padding: 3.3rem 5.5rem;
+    &__title {
+        font-size: 3rem;
+        font-family: $font-cormorant;
+        font-weight: 700;
+        margin: 0 0 2.8rem 0;
+    }
+    &__label {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        display: block;
+    }
+    &__input {
+        border: 1px solid rgba($green, .4);
+        padding: 2.2rem 3rem;
+        margin-bottom: 3rem;
+        display: block;
+        border-radius: 2rem;
+        width: 100%;
+        box-sizing: border-box;
+        &:focus {
+            border: 1px solid rgba($green, 1);
+            outline: none;
+        }
+    }
+    &__check {
+        font-size: 1.2rem;
+        color: rgba($green, .6);
+        line-height: 1.5;
+        max-width: 360px;
+    }
+    &__link {
+        margin-top: 12px;
+        padding: 23px 49px 23px 50px;
+    }
+    &__docs {
+        font-size: 1.2rem;
+        color: rgba($green, .6);
+        line-height: 1.5;
+    }
+}
+
+
