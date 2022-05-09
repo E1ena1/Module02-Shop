@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,700;1,700&family=Jost:wght@400;500&display=swap');
 $green: #27300f;
 $orange:#d26a22;
+$dark-orange: #bf601f;
 $white: #fff;
 
 $font-jost:'Jost', sans-serif;
@@ -21,7 +22,6 @@ body {
     margin: 0 auto 4.6rem;
     padding: 4rem 15px 0 15px;
     display: flex;
-    //justify-content: space-between;
     align-items: center;
     gap: 12rem;
     &__nav {
@@ -34,6 +34,7 @@ body {
     &__link {
         color:$green;
         text-decoration: none;
+        transition: .3s;
         &:hover {
             color: $orange;
         }
@@ -43,6 +44,7 @@ body {
         font-weight: 500;
         text-decoration: none;
         padding-left: 10rem;
+        transition: .3s;
         &:hover {
             color: $orange;
         }
@@ -59,6 +61,7 @@ body {
         background-position: center center;
         background-size: 1.7rem 1.5rem;
         position: relative;
+        transition: .3s;
         &:hover {
             background-color: $green;
             border: 1px solid $green;
@@ -81,6 +84,11 @@ body {
     background-size: contain;
     width: 12.3rem;
     height: 3.2rem;
+    &__footer {
+        width: 18rem;
+        height: 6rem;
+        margin-top: 1rem;
+    }
 }
 
 .container {
@@ -163,6 +171,7 @@ body {
         position: absolute;
         color: $green;
         text-align: left;
+        transition: .3s;
         &:hover {
             &::before {
                 background-color: $orange;
@@ -305,6 +314,10 @@ body {
     display: inline-block;
     letter-spacing: .13rem;
     border: none;
+    transition: .3s;
+    &:hover {
+        background-color: $dark-orange;
+    }
         &_min {
             letter-spacing: 0.08rem;
             padding: 18px 34px;
@@ -345,16 +358,18 @@ body {
         background-size: cover;
         position: relative;
         z-index: 0;
+        transition: .3s;
         &_white {
             height: 518px;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
+            transition: .3s;
             &:hover {
                 .swiper-slide__hover{
                     height: 233px;
                     opacity: 1;
-                    transition: .4s;
+                    transition: .3s;
                 }
                 &::after {
                     content: '';
@@ -437,6 +452,7 @@ body {
             display: flex;
             gap: 2rem;
             align-items: center;
+            transition: .3s;
             &:hover {
                 opacity: 1;
             }
@@ -475,6 +491,7 @@ body {
     &-button-prev, &-button-next {
         top: -7%;
         opacity: 40%;
+        transition: .3s;
         &:hover {
             opacity: 100%;
         }
@@ -637,6 +654,7 @@ body {
         border-radius: 4rem;
         display: block;
         font-size: 1.8rem;
+        transition: .3s;
         &:hover {
             border: 1px solid rgba($orange, .5);
             color: $orange;
@@ -666,7 +684,6 @@ body {
         }
     }
 }
-
 
 .catalog-grid {
     display: grid;
@@ -735,6 +752,7 @@ body {
         gap: 3rem;
         &-item {
             opacity: 0.4;
+            transition: .3s;
             &-mastercard {
                 display: block;
                 width: 55px;
@@ -779,19 +797,60 @@ body {
 }
 
 .contact {
+    margin-bottom: 16rem;
     &-box {
         display: flex;
-        align-items: center;
         justify-content: space-between;
+        &__item {
+            padding-top: 2.2rem;
+        }
         &__text {
             max-width: 400px;
             flex-grow: 1;
+            margin: 64px 0 0 120px;
         }
         &__form {
             flex-basis: 587px;
         }
+        &__list {
+            padding-left: 0;
+            list-style-type: none;
+            margin-top: 6rem;
+            &-item {
+                margin-bottom: 2rem;
+            }
+        }
+        &__link {
+            display: flex;
+            gap: 30px;
+            font-size: 2.4rem;
+            text-decoration: none;
+            color: $green;
+            font-weight: 500;
+            &::before {
+                content: '';
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 30px;
+                height: 30px;
+                display: block;
+            }
+        }
+        &__tel {
+            &::before {
+                background-image: url("../images/phone.svg");
+                background-size: 30px 30px;
+            }
+        }
+        &__mail {
+            &::before {
+                background-image: url("../images/mail.svg");
+                background-size: 30px 30px;
+            }
+        }
     }
 }
+
 .card {
     border: 2px solid rgba($green, .4);
     border-radius: 2rem;
@@ -836,5 +895,113 @@ body {
         line-height: 1.5;
     }
 }
+
+.footer {
+    padding-top: 7.7rem;
+    padding-bottom: 6.6rem;
+    border-top: 1px solid rgb($green, .4);
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 3rem;
+    }
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        flex-basis: 96rem;
+    }
+    &__list {
+        padding-left: 0;
+        margin: 0;
+    }
+    &__item {
+        list-style-type: none;
+        margin-bottom: 2.5rem;
+    }
+    &__link {
+        color: $green;
+        text-decoration: none;
+        font-size: 1.8rem;
+    }
+    &-social {
+        padding-left: 0;
+        display: flex;
+        gap: 3.3rem;
+        &__link {
+            display: block;
+            width: 45px;
+            height: 45px;
+            border-radius: 100%;
+            border: 2px solid rgba($green, .8);
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        &__vk {
+            background-image: url("../images/vk.svg");
+            background-size: 30px 30px;
+            opacity: .8;
+            transition: .3s;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        &__inst {
+            background-image: url("../images/instagram.svg");
+            background-size: 20px 20px;
+            opacity: .8;
+            transition: .3s;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        &__fb {
+            background-image: url("../images/facebook.svg");
+            background-size: 15px 20px;
+            opacity: .8;
+            transition: .3s;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        &__item {
+            list-style-type: none;
+        }
+    }
+    &__contact {
+        display: flex;
+        flex-direction: column;
+
+    }
+    &__tel {
+        font-size: 2.7rem;
+        color: $green;
+        text-decoration: none;
+        line-height: 1.2;
+        margin-bottom: 3rem;
+    }
+    &__mail {
+        font-size: 1.8rem;
+        color: $green;
+        text-decoration: none;
+        line-height: 1.2;
+        margin-bottom: 1.2rem;
+    }
+    &__text {
+        display: flex;
+        justify-content: space-between;
+        color: rgba($green, .6);
+    }
+    &__author {
+        color: rgba($green, .6);
+        text-decoration: none;
+        transition: .3s;
+        &:hover {
+            color: rgba($green, 1);
+        }
+    }
+}
+
+
+
 
 
