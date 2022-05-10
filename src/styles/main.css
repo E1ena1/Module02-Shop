@@ -7,6 +7,10 @@ body {
   font-size: 1.6rem;
   font-family: "Jost", sans-serif;
   color: #27300f;
+  background-image: url(../images/bgmain.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
 }
 
 .header {
@@ -91,14 +95,8 @@ body {
 }
 
 .main {
-  background-image: url(../images/main.png);
-  background-size: cover;
-  background-position-x: center;
-  background-repeat: no-repeat;
   position: relative;
   padding-bottom: 187px;
-  overflow-x: hidden;
-  z-index: 0;
 }
 .main__text {
   padding-top: 18.4rem;
@@ -143,7 +141,7 @@ body {
 .main__image_shadow {
   width: 92%;
   border-radius: 100%;
-  box-shadow: 1px 6px 20px 0 rgba(39, 48, 15, 0.2);
+  animation: shadow 5s infinite;
 }
 .main__image {
   width: 100%;
@@ -281,6 +279,7 @@ body {
   letter-spacing: 0.13rem;
   border: none;
   transition: 0.3s;
+  cursor: pointer;
 }
 .link:hover {
   background-color: #bf601f;
@@ -296,10 +295,6 @@ body {
 }
 
 .offer {
-  background-image: url(../images/offer.png);
-  background-size: cover;
-  background-position-x: center;
-  background-repeat: no-repeat;
   padding-top: 1.2rem;
   padding-bottom: 12.8rem;
 }
@@ -744,6 +739,7 @@ body {
 }
 .delivery__payment-item:hover {
   opacity: 1;
+  transform: scale(1.1);
 }
 .delivery__info {
   display: flex;
@@ -933,6 +929,10 @@ body {
   text-decoration: none;
   line-height: 1.2;
   margin-bottom: 3rem;
+  transition: 0.3s;
+}
+.footer__tel:hover {
+  color: #d26a22;
 }
 .footer__mail {
   font-size: 1.8rem;
@@ -940,6 +940,10 @@ body {
   text-decoration: none;
   line-height: 1.2;
   margin-bottom: 1.2rem;
+  transition: 0.3s;
+}
+.footer__mail:hover {
+  color: #d26a22;
 }
 .footer__text {
   display: flex;
@@ -953,6 +957,21 @@ body {
 }
 .footer__author:hover {
   color: #27300f;
+}
+
+@keyframes shadow {
+  0% {
+    box-shadow: 0 0 0 0;
+    transform: scale(0.95);
+  }
+  50% {
+    box-shadow: 3px 3px 15px 15px rgba(39, 48, 15, 0.2);
+    transform: scale(1);
+  }
+  100% {
+    box-shadow: 0 0 0 0;
+    transform: scale(0.95);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
