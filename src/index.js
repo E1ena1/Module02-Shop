@@ -1,7 +1,10 @@
 import 'normalize.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+
 import './styles/main.scss'
 
 import Swiper, { Navigation, Pagination } from 'swiper';
@@ -39,3 +42,5 @@ var swiper = new Swiper(".trendsSwiper", {
     },
     modules: [Navigation, Pagination],
 });
+
+AOS.init();
