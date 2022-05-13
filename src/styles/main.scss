@@ -34,7 +34,7 @@ body {
     background-image: url(../images/bgmain.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    overflow-x: hidden;
+    //overflow-x: hidden;
 }
 
 .header {
@@ -201,6 +201,9 @@ body {
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
+    @media (max-width: $r_tab){
+        max-width: 600px;
+    }
 }
 
 .main {
@@ -217,6 +220,13 @@ body {
         @media (max-width: $r_desk_1100) {
             padding-top: 8rem;
         }
+        @media (max-width: $r_desk) {
+          flex-basis: 330px;
+        }
+        @media (max-width: $r_tab){
+            flex-basis: 100%;
+            padding-top: 0;
+        }
     }
 
     &__item {
@@ -229,10 +239,20 @@ body {
         @media (max-width: $r_desk_hd) {
             margin-left: 5rem;
         }
+        @media (max-width: $r_desk_1100) {
+            margin-left: 1rem;
+            margin-top: 1rem;
+        }
+        @media (max-width: $r_tab) {
+           max-width: 100%;
+        }
     }
 
     &__link {
         margin-top: 5.1rem;
+        @media (max-width: $r_tab) {
+            text-align: center;
+        }
     }
 
     &__flex {
@@ -241,6 +261,10 @@ body {
         gap: 30px;
         @media (max-width: $r_desk_1100) {
             align-items: flex-end;
+        }
+        @media (max-width: $r_desk) {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
         }
     }
 
@@ -269,6 +293,14 @@ body {
             flex-basis: 450px;
             height: 450px;
         }
+        @media (max-width: $r_desk) {
+            flex-basis: calc(100% - 330px);
+            width: calc(100% - 330px);
+            height: auto;
+        }
+        @media (max-width: $r_tab){
+            display: none;
+        }
     }
 
     &__line {
@@ -287,7 +319,10 @@ body {
         @media (max-width: $r_desk_hd) {
             border: 1px solid transparent;
         }
-        //@media (max-width: $r_desk_1280) {}
+        @media (max-width: $r_desk_1280) {
+         width: auto;
+         height: auto;
+         }
     }
     &__image_shadow {
         width: 92%;
@@ -298,6 +333,14 @@ body {
     &__image {
         width: 100%;
         height: 100%;
+    }
+    &__imagemobi {
+        display: none;
+        @media (max-width: $r_tab) {
+            display: block;
+            max-width: 300px;
+            margin: 0 auto;
+        }
     }
 
     &__btn {
@@ -405,9 +448,25 @@ body {
         width: 183px;
         height: 194px;
         z-index: -1;
-        @media (max-width: $r_desk) {
+        @media (max-width: $r_desk_1280) {
+            top: 100px;
+            right: -10px;
+            width: 167px;
+            height: 159px;
+        }
+        @media (max-width: $r_desk_hd) {
             width: 166px;
             height: 160px;
+        }
+        @media (max-width: $r_desk_1100) {
+            top: 45px;
+            width: 140px;
+            height: 120px;
+        }
+        @media (max-width: $r_desk) {
+            top: 97px;
+            width: 112px;
+            height: 110px;
         }
     }
 
@@ -430,9 +489,25 @@ body {
         width: 86px;
         height: 72px;
         z-index: -1;
-        @media (max-width: $r_desk_1100) {
-            top: 515px;
+        @media (max-width: $r_desk_1600) {
+            top: 470px;
+        }
+        @media (max-width: $r_desk_1350) {
+            top: 505px;
             left: 3px;
+        }
+        @media (max-width: $r_desk_hd) {
+            top: 400px;
+        }
+        @media (max-width: $r_desk_1100) {
+            top: 475px;
+            left: -8px;
+        }
+        @media (max-width: $r_desk) {
+            top: 580px;
+            left: -9px;
+            width: 50px;
+            height: 38px;
         }
     }
 
@@ -457,7 +532,10 @@ body {
         font-size: 7rem;
     }
     @media (max-width: $r_desk_1100) {
-        font-size: 6rem;
+        font-size: 5rem;
+    }
+    @media (max-width: $r_tab){
+        text-align: center;
     }
     &__span {
             font-style: italic;
@@ -474,6 +552,9 @@ body {
 .description {
     line-height: 1.5;
     margin: 0;
+    @media (max-width: $r_tab){
+        text-align: center;
+    }
         &_size-s {
             font-size: 1.8rem;
             @media (max-width: $r_desk_1280) {
