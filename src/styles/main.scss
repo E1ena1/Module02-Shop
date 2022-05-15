@@ -21,6 +21,7 @@ $r_desk_1280: 1280px;
 $r_desk_1350: 1350px;
 $r_desk_1500: 1500px;
 $r_desk_1600: 1600px;
+$r_desk_1700: 1700px;
 
 
 html {
@@ -260,7 +261,7 @@ body {
         justify-content: space-between;
         gap: 30px;
         @media (max-width: $r_desk_1100) {
-            align-items: flex-end;
+            align-items: flex-start;
         }
         @media (max-width: $r_desk) {
             padding-top: 1rem;
@@ -316,13 +317,13 @@ body {
             width: 600px;
             height: 600px;
         }
+        @media (max-width: $r_desk_1280) {
+         width: auto;
+         //height: auto;
+         }
         @media (max-width: $r_desk_hd) {
             border: 1px solid transparent;
         }
-        @media (max-width: $r_desk_1280) {
-         width: auto;
-         height: auto;
-         }
     }
     &__image_shadow {
         width: 92%;
@@ -437,8 +438,17 @@ body {
         top: -50px;
         left: 681px;
         width: 86px;
-        height: 92px;
+        //height: 92px;
         z-index: -1;
+        @media (max-width: $r_desk_1100) {
+            top: -52px;
+            left: 242px;
+        }
+        @media (max-width: $r_mob_500) {
+            transform: rotate(90deg);
+            left: 92%;
+            top: 66%;
+        }
     }
 
     &__avocado {
@@ -448,9 +458,17 @@ body {
         width: 183px;
         height: 194px;
         z-index: -1;
+        @media (max-width: $r_desk_1700) {
+            top: 77px;
+            width: 139px;
+            height: 129px;
+        }
+        @media (max-width: $r_desk_1600) {
+            top: 101px;
+        }
         @media (max-width: $r_desk_1280) {
             top: 100px;
-            right: -10px;
+            right: -20px;
             width: 167px;
             height: 159px;
         }
@@ -468,6 +486,10 @@ body {
             width: 112px;
             height: 110px;
         }
+        @media (max-width: $r_mob_500) {
+            top: 80px;
+            right: -50px;
+        }
     }
 
     &__tomato {
@@ -476,9 +498,21 @@ body {
         right: 11.1rem;
         width: 11rem;
         z-index: -1;
+        @media (max-width: $r_desk_1350) {
+            bottom: 10rem;
+        }
         @media (max-width: $r_desk_1100) {
             bottom: 7.5rem;
             width: 9rem;
+        }
+        @media (max-width: $r_mob_500) {
+            bottom: inherit;
+            top: 80px;
+            right: 41.1rem;
+        }
+        @media (max-width: $r_mob_400) {
+            top: 8rem;
+            right: 30rem;
         }
     }
 
@@ -500,14 +534,17 @@ body {
             top: 400px;
         }
         @media (max-width: $r_desk_1100) {
-            top: 475px;
-            left: -8px;
+            display: none;
         }
         @media (max-width: $r_desk) {
-            top: 580px;
-            left: -9px;
-            width: 50px;
-            height: 38px;
+            display: none;
+        }
+        @media (max-width: $r_mob_400) {
+            display: block;
+            top: 364px;
+            left: 3px;
+            width: 43px;
+            height: 33px;
         }
     }
 
@@ -518,6 +555,12 @@ body {
         width: 93px;
         height: 113px;
         @media (max-width: $r_desk_1100) {
+            bottom: 38px;
+        }
+        @media (max-width: $r_desk) {
+            bottom: 140px;
+        }
+        @media (max-width: $r_mob_400) {
             display: none;
         }
     }
@@ -531,7 +574,7 @@ body {
     @media (max-width: $r_desk_1280) {
         font-size: 7rem;
     }
-    @media (max-width: $r_desk_1100) {
+    @media (max-width: $r_desk) {
         font-size: 5rem;
     }
     @media (max-width: $r_tab){
@@ -614,6 +657,11 @@ body {
 .slider {
     overflow: hidden;
     padding-top: 100px;
+    padding-bottom: 30px;
+    @media (max-width: $r_tab) {
+        max-width: 450px;
+        margin: 0 auto;
+    }
 }
 
 .swiper {
@@ -634,6 +682,13 @@ body {
             flex-direction: column;
             justify-content: flex-end;
             transition: .3s;
+            background-position: center;
+            @media (max-width: $r_tab) {
+                height: 415px;
+            }
+            @media (max-width: $r_desk) {
+                height: 445px;
+            }
             &:hover {
                 .swiper-slide__hover{
                     height: 233px;
@@ -670,18 +725,24 @@ body {
         }
         &-5 {
             background-image: url("../images/catalog/egg.png");
+            background-size: 230px;
         }
         &-6 {
             background-image: url("../images/catalog/cheese.png");
+            background-size: 230px;
         }
         &-7 {
             background-image: url("../images/catalog/yogurt-bluberry.png");
+            background-size: 100px;
+            background-position: center;
         }
         &-8 {
             background-image: url("../images/catalog/cottage-cheese.png");
+            background-size: 230px;
         }
         &-9 {
             background-image: url("../images/catalog/mocarela.png");
+            background-size: 230px;
         }
         &__description {
             min-height: 50px;
@@ -767,6 +828,9 @@ body {
         &::after {
             display: none;
         }
+        //@media (max-width: $r_mob_500) {
+        //    display: none;
+        //}
     }
     &-button-prev {
         left: initial;
@@ -776,6 +840,9 @@ body {
         width: 20px;
         height: 20px;
         right: 72px;
+        @media (max-width: $r_mob_500) {
+            display: none;
+        }
     }
     &-button-next{
         background-image: url("../images/arrow-next.svg");
@@ -784,7 +851,26 @@ body {
         width: 20px;
         height: 20px;
         right: -9px;
+        @media (max-width: $r_mob_500) {
+            display: none;
+        }
     }
+}
+.swiper-horizontal>.swiper-pagination-bullets {
+    @media (max-width: $r_mob_500) {
+        display: block;
+        bottom: -30px;
+    }
+}
+.swiper-pagination-bullet {
+    width: 9px;
+    height: 8px;
+}
+.swiper-pagination-bullet-active {
+    background: $orange;
+    width: 9px;
+    height: 8px;
+    border: 1px solid $orange;
 }
 
 .counter {
@@ -826,6 +912,12 @@ body {
             width: 3.3rem;
         }
     }
+    & + .link {
+        flex-grow: 1;
+        text-align: center;
+        //padding-left: 0;
+        //padding-right: 0;
+    }
 }
 
 .about {
@@ -837,6 +929,9 @@ body {
         justify-content: flex-end;
         gap: 26rem;
         margin-top: 1rem;
+        @media (max-width: $r_desk) {
+            gap: 6rem;
+        }
     }
 
     &__text {
@@ -878,6 +973,9 @@ body {
         }
         &_traditions {
             margin-left: 9rem;
+            @media (max-width: $r_tab_900) {
+                margin-left: 1rem;
+            }
             &::before {
                 background-image: url("../images/traditional.svg");
                 background-size: 40px 40px;
@@ -885,6 +983,9 @@ body {
         }
         &_goods {
             margin-left: 7.1rem;
+            @media (max-width: $r_tab_900) {
+                margin-left: 1rem;
+            }
             &::before {
                 background-image: url("../images/good.svg");
                 background-size: 46px 46px;
@@ -911,6 +1012,7 @@ body {
     gap: 2rem;
     margin-top: 8.8rem;
     margin-bottom: 5rem;
+    flex-wrap: wrap;
     &__item {
         flex-basis: 230px;
         text-align: center;
@@ -958,10 +1060,19 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
+    @media (max-width: $r_desk_1350) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: $r_desk_1100) {
+        grid-template-columns: repeat(2, 1fr);
+    }
     &__item {
         border: 1px solid rgba($green, .4);
         border-radius: 4%;
         padding: 30px 30px 40px 30px;
+        @media (max-width: $r_tab) {
+            padding: 10px;
+        }
     }
     &__cover {
         height: 22rem;
@@ -989,6 +1100,10 @@ body {
         display: flex;
         margin-top: 2.8rem;
         justify-content: space-between;
+        @media (max-width: $r_tab) {
+            flex-direction: column;
+            gap: 5%;
+        }
     }
     &__price {
         font-size: 2.4rem;
