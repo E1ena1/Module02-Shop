@@ -19,6 +19,7 @@ $r_desk_1100: 1100px;
 $r_desk_hd: 1200px;
 $r_desk_1280: 1280px;
 $r_desk_1350: 1350px;
+$r_desk_1400: 1400px;
 $r_desk_1500: 1500px;
 $r_desk_1600: 1600px;
 $r_desk_1700: 1700px;
@@ -35,7 +36,7 @@ body {
     background-image: url(../images/bgmain.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    //overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 .header {
@@ -676,6 +677,15 @@ body {
         position: relative;
         z-index: 0;
         transition: .3s;
+
+        @media (max-width: $r_desk_1280) {
+            padding: 3rem;
+        }
+        @media (max-width: $r_tab) {
+            padding: 2rem 4rem;
+            background-size: 250px;
+            margin-right: 20px;
+        }
         &_white {
             height: 518px;
             display: flex;
@@ -683,11 +693,11 @@ body {
             justify-content: flex-end;
             transition: .3s;
             background-position: center;
-            @media (max-width: $r_tab) {
-                height: 415px;
-            }
             @media (max-width: $r_desk) {
                 height: 445px;
+            }
+            @media (max-width: $r_tab) {
+                height: 345px;
             }
             &:hover {
                 .swiper-slide__hover{
@@ -716,6 +726,9 @@ body {
         }
         &-2 {
             background-image: url("../images/pasta.png");
+            @media (max-width: $r_tab) {
+                background-size: 203px;
+            }
         }
         &-3 {
             background-image: url("../images/steaks.png");
@@ -739,6 +752,9 @@ body {
         &-8 {
             background-image: url("../images/catalog/cottage-cheese.png");
             background-size: 230px;
+            @media (max-width: $r_tab) {
+                background-size: 153px;
+            }
         }
         &-9 {
             background-image: url("../images/catalog/mocarela.png");
@@ -749,10 +765,22 @@ body {
             max-width: 297px;
             line-height: 2.5rem;
             letter-spacing: .05rem;
+            @media (max-width: $r_tab) {
+                font-size: 1.6rem;
+            }
+            @media (max-width: $r_mob_500) {
+                font-size: 1.2rem;
+            }
         }
         &__price {
             font-size: 2.4rem;
             margin-bottom: 3.4rem;
+            @media (max-width: $r_tab) {
+                font-size: 1.8rem;
+            }
+            @media (max-width: $r_mob_500) {
+                font-size: 1.4rem;
+            }
         }
         &__title {
             font-family: $font-cormorant;
@@ -760,6 +788,16 @@ body {
             font-size: 3rem;
             color: $green;
             margin-bottom: 0;
+            @media (max-width: $r_desk_1280) {
+                height: 50px;
+                font-size: 2rem;
+            }
+            @media (max-width: $r_tab) {
+                font-size: 1.6rem;
+            }
+            @media (max-width: $r_mob_500) {
+                font-size: 1.4rem;
+            }
         }
         &__hover {
             height: 0;
@@ -771,6 +809,9 @@ body {
             max-width: 263px;
             margin-top: 2.5rem;
             margin-bottom: 3.4rem;
+            @media (max-width: $r_tab) {
+                font-size: 1rem;
+            }
         }
         &__link {
             text-decoration: none;
@@ -783,6 +824,10 @@ body {
             gap: 2rem;
             align-items: center;
             transition: .3s;
+            @media (max-width: $r_tab) {
+                font-size: 1rem;
+                gap: 1rem;
+            }
             &:hover {
                 opacity: 1;
             }
@@ -794,6 +839,10 @@ body {
                 background-image: url("../images/plus.svg");
                 background-size: cover;
                 background-repeat: no-repeat;
+                @media (max-width: $r_tab) {
+                    width: 18px;
+                    height: 18px;
+                }
             }
         }
         &__cover {
@@ -802,6 +851,18 @@ body {
             width: 100%;
             height: 320px;
             text-align: center;
+            @media (max-width: $r_desk_1400) {
+                height: 280px;
+            }
+            @media (max-width: $r_desk_1280) {
+                height: 280px;
+            }
+            @media (max-width: $r_desk_1100) {
+                height: 203px;
+            }
+            @media (max-width: $r_tab) {
+                height: 183px;
+            }
         }
         &__image {
             height: 100%;
@@ -876,6 +937,11 @@ body {
 .counter {
     display: flex;
     align-items: center;
+    &_tab-none {
+        @media (max-width: $r_tab) {
+            display: none;
+        }
+    }
     &__btn {
         cursor: pointer;
         width: 50px;
@@ -886,6 +952,14 @@ body {
         padding: 0;
         background-repeat: no-repeat;
         background-position: center center;
+        @media (max-width: $r_desk_1350) {
+            width: 40px;
+            height: 40px;
+        }
+        @media (max-width: $r_desk_1100) {
+            width: 35px;
+            height: 35px;
+        }
         &_min {
             width: 40px;
             height: 40px;
@@ -908,15 +982,30 @@ body {
         width: 46px;
         border: none;
         padding: 0;
+        @media (max-width: $r_desk_1400) {
+            width: 25px;
+        }
         &_min {
             width: 3.3rem;
         }
     }
     & + .link {
-        flex-grow: 1;
         text-align: center;
-        //padding-left: 0;
-        //padding-right: 0;
+        @media (max-width: $r_desk_1400) {
+            padding: 2rem 3rem;
+        }
+        @media (max-width: $r_desk_1280) {
+            padding: 2rem 3rem;
+        }
+        @media (max-width: $r_desk_1100) {
+            font-size: 1.5rem;
+            padding: 1.5rem 2.5rem;
+        }
+        @media (max-width: $r_tab) {
+            font-size: 1rem;
+            padding: 1.4rem 2.2rem;
+            width: 12rem;
+        }
     }
 }
 
@@ -931,6 +1020,9 @@ body {
         margin-top: 1rem;
         @media (max-width: $r_desk) {
             gap: 6rem;
+        }
+        @media (max-width: $r_tab_900) {
+            gap: 4rem;
         }
     }
 
@@ -1090,11 +1182,19 @@ body {
         font-family: $font-cormorant;
         font-weight: 700;
         margin: 0;
+        @media (max-width: $r_tab) {
+            font-size: 2rem;
+            height: 30px;
+        }
     }
     &__description {
         color: rgba(39, 48, 15, 0.7);
         max-width: 242px;
         line-height: 2.3rem;
+        @media (max-width: $r_tab) {
+            height: 60px;
+            margin: 0;
+        }
     }
     &__footer {
         display: flex;
@@ -1103,11 +1203,15 @@ body {
         @media (max-width: $r_tab) {
             flex-direction: column;
             gap: 5%;
+            margin-top: 2rem;
         }
     }
     &__price {
         font-size: 2.4rem;
         margin: 0;
+        @media (max-width: $r_tab) {
+            font-size: 1.8rem;
+        }
     }
 }
 
@@ -1122,10 +1226,20 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        @media (max-width: $r_tab_900) {
+            padding: 0;
+        }
     }
     &__right-block {
         max-width: 508px;
         padding-right: 1.4rem;
+        @media (max-width: $r_tab) {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            align-items: center;
+            max-width: inherit;
+        }
     }
     &__payment {
         list-style-type: none;
@@ -1175,6 +1289,12 @@ body {
         padding-top: 7rem;
         justify-content: space-around;
         letter-spacing: 0.07px;
+        @media (max-width: $r_desk) {
+            gap: 1rem;
+        }
+        @media (max-width: $r_tab) {
+            flex-direction: column;
+        }
     }
     &__discount {
         color: $orange;
@@ -1186,6 +1306,14 @@ body {
     &-box {
         display: flex;
         justify-content: space-between;
+        @media (max-width: $r_desk) {
+            flex-direction: column;
+            align-items: center;
+        }
+        @media (max-width: $r_tab) {
+            flex-direction: column;
+            align-items: center;
+        }
         &__item {
             padding-top: 2.2rem;
         }
@@ -1193,6 +1321,12 @@ body {
             max-width: 400px;
             flex-grow: 1;
             margin: 64px 0 0 120px;
+            @media (max-width: $r_desk) {
+                margin: 0;
+            }
+            @media (max-width: $r_tab) {
+                margin: 0;
+            }
         }
         &__form {
             flex-basis: 587px;
@@ -1201,6 +1335,10 @@ body {
             padding-left: 0;
             list-style-type: none;
             margin-top: 6rem;
+            @media (max-width: $r_tab) {
+                display: flex;
+                justify-content: space-between;
+            }
             &-item {
                 margin-bottom: 2rem;
             }
@@ -1212,6 +1350,10 @@ body {
             text-decoration: none;
             color: $green;
             font-weight: 500;
+            @media (max-width: $r_tab) {
+                gap: 10px;
+                font-size: 1.8rem;
+            }
             &::before {
                 content: '';
                 background-repeat: no-repeat;
@@ -1219,18 +1361,28 @@ body {
                 width: 30px;
                 height: 30px;
                 display: block;
+                @media (max-width: $r_tab) {
+                    width: 20px;
+                    height: 20px;
+                }
             }
         }
         &__tel {
             &::before {
                 background-image: url("../images/phone.svg");
                 background-size: 30px 30px;
+                @media (max-width: $r_tab) {
+                    background-size: 18px 18px;
+                }
             }
         }
         &__mail {
             &::before {
                 background-image: url("../images/mail.svg");
                 background-size: 30px 30px;
+                @media (max-width: $r_tab) {
+                    background-size: 18px 18px;
+                }
             }
         }
     }
@@ -1289,15 +1441,50 @@ body {
         display: flex;
         justify-content: space-between;
         margin-bottom: 3rem;
+        @media (max-width: $r_desk_hd) {
+            gap: 2rem;
+        }
+        @media (max-width: $r_tab_900) {
+            flex-direction: column;
+            align-items: center;
+        }
+        @media (max-width: $r_tab) {
+           flex-direction: column;
+            align-items: center;
+        }
     }
     &__info {
         display: flex;
         justify-content: space-between;
         flex-basis: 96rem;
+        @media (max-width: $r_tab_900) {
+            gap: 3rem;
+            flex-basis: auto;
+        }
+        @media (max-width: $r_tab) {
+            flex-direction: column;
+            justify-content: flex-start;
+
+            align-items: center;
+            gap: 0;
+        }
     }
     &__list {
         padding-left: 0;
         margin: 0;
+        &_tab {
+            @media (max-width: $r_tab) {
+                display: flex;
+                gap: 4rem;
+            }
+        }
+        &_adress {
+            @media (max-width: $r_tab) {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+        }
     }
     &__item {
         list-style-type: none;
@@ -1355,7 +1542,6 @@ body {
     &__contact {
         display: flex;
         flex-direction: column;
-
     }
     &__tel {
         font-size: 2.7rem;
@@ -1383,6 +1569,10 @@ body {
         display: flex;
         justify-content: space-between;
         color: rgba($green, .6);
+        @media (max-width: $r_tab) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
     &__author {
         color: rgba($green, .6);
