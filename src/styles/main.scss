@@ -758,6 +758,9 @@ body {
     & > .swiper-horizontal>.swiper-pagination-bullets {
         @media (max-width: $r_mob_500) {
             display: block;
+            bottom: -4.25rem;
+        }
+        @media (max-width: $r_mob_400) {
             bottom: -5.25rem;
         }
     }
@@ -1013,6 +1016,9 @@ body {
             @media (max-width: $r_mob_500) {
                 height: 100px;
             }
+            @media (max-width: $r_mob_400) {
+                height: 88px;
+            }
         }
         &__image {
             height: 100%;
@@ -1170,6 +1176,7 @@ body {
     padding-top: 3.1rem;
     @media (max-width: $r_mob_400) {
         padding-bottom: 6.5rem;
+        padding-top: 2.5rem;
     }
     &__box {
         display: flex;
@@ -1275,7 +1282,7 @@ body {
 .trends {
     margin-bottom: 18.3rem;
     @media (max-width: $r_mob_400) {
-        margin-bottom: 3.4rem;
+        margin-bottom: 5.38rem;
     }
     &__text {
         padding-top: 3rem;
@@ -1345,6 +1352,8 @@ body {
         @media (max-width: $r_mob_500) {
             display: block;
             text-align: center;
+            margin-top: 5.13rem;
+            margin-bottom: 2.25rem;
         }
         &__link {
             color: $green;
