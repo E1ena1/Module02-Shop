@@ -364,6 +364,7 @@ body {
         }
         @media (max-width: $r_desk_1280) {
          width: auto;
+         //height: auto;
          }
         @media (max-width: $r_desk_hd) {
             border: 1px solid transparent;
@@ -491,6 +492,7 @@ body {
         top: -50px;
         left: 681px;
         width: 86px;
+        //height: 92px;
         z-index: -1;
         @media (max-width: $r_desk_1100) {
             top: -52px;
@@ -701,7 +703,7 @@ body {
     text-transform: uppercase;
     padding: 2.4rem 4.2rem;
     background-color: $orange;
-    box-shadow: 0 0.9rem 1rem 0.3rem ($orange, 20%);
+    box-shadow: 0px 8px 15px 0px #d26a22;
     text-decoration: none;
     border-radius: 3.9rem;
     display: inline-block;
@@ -722,7 +724,7 @@ body {
             letter-spacing: 0.08rem;
             padding: 18px 34px;
             font-size: 1.4rem;
-            box-shadow: 0 10px 11.31px 1.69px ($orange, 0.15)
+            box-shadow: 0 7px 14.31px 0.69px #d26a22;
         }
         &_max {
             padding: 2.4rem 5.2rem;
@@ -927,6 +929,9 @@ body {
                 height: 50px;
                 font-size: 2rem;
             }
+            //@media (max-width: $r_tab) {
+            //    font-size: 1.6rem;
+            //}
             @media (max-width: $r_mob_500) {
                 font-size: 1.75rem;
                 height: 3.75rem;
@@ -1047,6 +1052,9 @@ body {
         &::after {
             display: none;
         }
+        //@media (max-width: $r_mob_500) {
+        //    display: none;
+        //}
     }
     &-button-prev {
         left: initial;
@@ -1173,9 +1181,6 @@ body {
 .about {
     padding-bottom: 19rem;
     padding-top: 3.1rem;
-    @media (max-width: $r_tab) {
-        padding-bottom: 17rem;
-    }
     @media (max-width: $r_mob_400) {
         padding-bottom: 6.5rem;
         padding-top: 2.5rem;
@@ -1795,6 +1800,7 @@ body {
         @media (max-width: $r_mob_500) {
             font-size: 1.25rem;
             margin-bottom: 2.25rem;
+            text-align: center;
         }
     }
     &__link {
