@@ -812,6 +812,9 @@ body {
                     height: 233px;
                     opacity: 1;
                     transition: .3s;
+                    @media (max-width: $r_mob_500) {
+                        height: auto;
+                    }
                 }
                 &::after {
                     content: '';
@@ -823,11 +826,17 @@ body {
                     left: 2px;
                     border-radius: 2rem;
                     z-index: -1;
+                    @media (max-width: $r_mob_500) {
+                        display: none;
+                    }
                 }
             }
         }
         &:hover {
             box-shadow: 0 0 0 2px rgba(39, 48, 15, 0.4) inset;
+            @media (max-width: $r_mob_500) {
+                box-shadow: none;
+            }
         }
         &-1 {
             background-image: url("../images/bottle-milk.png");
@@ -916,13 +925,18 @@ body {
             }
             @media (max-width: $r_mob_500) {
                 font-size: 1.75rem;
-                height: auto;
+                height: 3.75rem;
                 margin-top: 1.38rem;
+                text-align: center;
             }
         }
         &__hover {
             height: 0;
             opacity: 0;
+            @media (max-width: $r_mob_500) {
+                height: auto;
+                opacity: 1;
+            }
         }
         &__text {
             color: rgba($green, 0.7);
@@ -932,6 +946,9 @@ body {
             margin-bottom: 3.4rem;
             @media (max-width: $r_tab) {
                 font-size: 1rem;
+            }
+            @media (max-width: $r_mob_500) {
+                display: none;
             }
         }
         &__link {
@@ -949,6 +966,11 @@ body {
                 font-size: 1rem;
                 gap: 1rem;
             }
+            @media (max-width: $r_mob_500) {
+                font-size: 1.25rem;
+                justify-content: center;
+                height: 3.38rem;
+            }
             &:hover {
                 opacity: 1;
             }
@@ -963,6 +985,10 @@ body {
                 @media (max-width: $r_tab) {
                     width: 18px;
                     height: 18px;
+                }
+                @media (max-width: $r_mob_500) {
+                    width: 21px;
+                    height: 21px;
                 }
             }
         }
@@ -1134,6 +1160,7 @@ body {
         @media (max-width: $r_mob_500) {
             padding: 1.75rem 1.38rem;
             font-size: 1.25rem;
+            margin: 0 auto;
         }
     }
 }
@@ -1275,21 +1302,25 @@ body {
     margin-top: 8.8rem;
     margin-bottom: 5rem;
     flex-wrap: wrap;
+    @media (max-width: $r_mob_500) {
+        display: none;
+    }
     @media (max-width: $r_tab) {
         gap: 1.5rem;
         justify-content: center;
     }
-    @media (max-width: $r_mob_400) {
+    @media (max-width: $r_mob_500) {
         margin-top: 5rem;
     }
     &__item {
         flex-basis: 230px;
         text-align: center;
-        @media (max-width: $r_mob_400) {
+        @media (max-width: $r_mob_500) {
             flex-basis: 110px;
         }
     }
     &__link {
+        list-style-type: none;
         color: $green;
         text-decoration: none;
         border: 1px solid rgba($green, .5);
@@ -1304,6 +1335,37 @@ body {
         &:hover {
             border: 1px solid rgba($orange, .5);
             color: $orange;
+        }
+    }
+    &-swiper {
+        display: none;
+        gap: 2rem;
+        margin-top: 8.8rem;
+        margin-bottom: 5rem;
+        @media (max-width: $r_mob_500) {
+            display: block;
+            text-align: center;
+        }
+        &__link {
+            color: $green;
+            text-decoration: none;
+            border: 1px solid rgba($green, .5);
+            padding: 2.4rem 0;
+            border-radius: 4rem;
+            display: block;
+            font-size: 1.25rem;
+            transition: .3s;
+            flex-basis: 120px;
+            margin-right: 0;
+            @media (max-width: $r_mob_400) {
+                font-size: 1.25rem;
+                flex-basis: 110px;
+                padding: 1.75rem 0;
+            }
+            &:hover {
+                border: 1px solid rgba($orange, .5);
+                color: $orange;
+            }
         }
     }
 }
@@ -1341,6 +1403,9 @@ body {
             }
         }
     }
+    &__list {
+        overflow: hidden;
+}
 }
 
 .catalog-grid {
@@ -1434,7 +1499,7 @@ body {
         }
         @media (max-width: $r_mob_500) {
             font-size: 1.5rem;
-
+            text-align: center;
         }
     }
 }
@@ -1921,7 +1986,7 @@ body {
         transform: scale(0.99);
     }
     50% {
-        box-shadow: 3px 3px 15px 15px rgb(39 48 15 / 20%);
+        box-shadow: 3px 3px 15px 15px rgba(39 48 15 / 20%);
         transform: scale(1);
     }
     100% {

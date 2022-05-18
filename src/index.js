@@ -71,4 +71,13 @@ var swiper = new Swiper(".trendsSwiper", {
     }
 });
 
+var swiper = new Swiper(".categorySwiper", {
+    slidesPerView: "auto",
+    spaceBetween: 12,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
+
 AOS.init();

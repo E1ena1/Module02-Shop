@@ -957,6 +957,11 @@ body {
   opacity: 1;
   transition: 0.3s;
 }
+@media (max-width: 500px) {
+  .swiper-slide_white:hover .swiper-slide__hover {
+    height: auto;
+  }
+}
 .swiper-slide_white:hover::after {
   content: "";
   background-color: rgba(255, 255, 255, 0.55);
@@ -968,8 +973,18 @@ body {
   border-radius: 2rem;
   z-index: -1;
 }
+@media (max-width: 500px) {
+  .swiper-slide_white:hover::after {
+    display: none;
+  }
+}
 .swiper-slide:hover {
   box-shadow: 0 0 0 2px rgba(39, 48, 15, 0.4) inset;
+}
+@media (max-width: 500px) {
+  .swiper-slide:hover {
+    box-shadow: none;
+  }
 }
 .swiper-slide-1 {
   background-image: url("../images/bottle-milk.png");
@@ -1078,13 +1093,20 @@ body {
 @media (max-width: 500px) {
   .swiper-slide__title {
     font-size: 1.75rem;
-    height: auto;
+    height: 3.75rem;
     margin-top: 1.38rem;
+    text-align: center;
   }
 }
 .swiper-slide__hover {
   height: 0;
   opacity: 0;
+}
+@media (max-width: 500px) {
+  .swiper-slide__hover {
+    height: auto;
+    opacity: 1;
+  }
 }
 .swiper-slide__text {
   color: rgba(39, 48, 15, 0.7);
@@ -1096,6 +1118,11 @@ body {
 @media (max-width: 768px) {
   .swiper-slide__text {
     font-size: 1rem;
+  }
+}
+@media (max-width: 500px) {
+  .swiper-slide__text {
+    display: none;
   }
 }
 .swiper-slide__link {
@@ -1116,6 +1143,13 @@ body {
     gap: 1rem;
   }
 }
+@media (max-width: 500px) {
+  .swiper-slide__link {
+    font-size: 1.25rem;
+    justify-content: center;
+    height: 3.38rem;
+  }
+}
 .swiper-slide__link:hover {
   opacity: 1;
 }
@@ -1132,6 +1166,12 @@ body {
   .swiper-slide__link::before {
     width: 18px;
     height: 18px;
+  }
+}
+@media (max-width: 500px) {
+  .swiper-slide__link::before {
+    width: 21px;
+    height: 21px;
   }
 }
 .swiper-slide__cover {
@@ -1330,6 +1370,7 @@ body {
   .counter + .link {
     padding: 1.75rem 1.38rem;
     font-size: 1.25rem;
+    margin: 0 auto;
   }
 }
 
@@ -1499,13 +1540,18 @@ body {
   margin-bottom: 5rem;
   flex-wrap: wrap;
 }
+@media (max-width: 500px) {
+  .category {
+    display: none;
+  }
+}
 @media (max-width: 768px) {
   .category {
     gap: 1.5rem;
     justify-content: center;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .category {
     margin-top: 5rem;
   }
@@ -1514,12 +1560,13 @@ body {
   flex-basis: 230px;
   text-align: center;
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .category__item {
     flex-basis: 110px;
   }
 }
 .category__link {
+  list-style-type: none;
   color: #27300f;
   text-decoration: none;
   border: 1px solid rgba(39, 48, 15, 0.5);
@@ -1535,6 +1582,41 @@ body {
   }
 }
 .category__link:hover {
+  border: 1px solid rgba(210, 106, 34, 0.5);
+  color: #d26a22;
+}
+.category-swiper {
+  display: none;
+  gap: 2rem;
+  margin-top: 8.8rem;
+  margin-bottom: 5rem;
+}
+@media (max-width: 500px) {
+  .category-swiper {
+    display: block;
+    text-align: center;
+  }
+}
+.category-swiper__link {
+  color: #27300f;
+  text-decoration: none;
+  border: 1px solid rgba(39, 48, 15, 0.5);
+  padding: 2.4rem 0;
+  border-radius: 4rem;
+  display: block;
+  font-size: 1.25rem;
+  transition: 0.3s;
+  flex-basis: 120px;
+  margin-right: 0;
+}
+@media (max-width: 400px) {
+  .category-swiper__link {
+    font-size: 1.25rem;
+    flex-basis: 110px;
+    padding: 1.75rem 0;
+  }
+}
+.category-swiper__link:hover {
   border: 1px solid rgba(210, 106, 34, 0.5);
   color: #d26a22;
 }
@@ -1578,6 +1660,9 @@ body {
     width: 20px;
     height: 20px;
   }
+}
+.catalog__list {
+  overflow: hidden;
 }
 
 .catalog-grid {
@@ -1700,6 +1785,7 @@ body {
 @media (max-width: 500px) {
   .catalog-grid__price {
     font-size: 1.5rem;
+    text-align: center;
   }
 }
 
