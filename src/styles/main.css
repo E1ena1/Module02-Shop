@@ -253,6 +253,11 @@ body {
   padding-bottom: 187px;
   overflow: hidden;
 }
+@media (max-width: 768px) {
+  .main {
+    padding-bottom: 80px;
+  }
+}
 @media (max-width: 500px) {
   .main {
     padding-bottom: 4.75rem;
@@ -655,6 +660,12 @@ body {
     width: 9rem;
   }
 }
+@media (max-width: 900px) {
+  .main__tomato {
+    right: 1.1rem;
+    bottom: 12.5rem;
+  }
+}
 @media (max-width: 500px) {
   .main__tomato {
     bottom: inherit;
@@ -860,6 +871,16 @@ body {
   padding-top: 1.2rem;
   padding-bottom: 10rem;
 }
+@media (max-width: 900px) {
+  .offer {
+    padding-bottom: 4.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .offer {
+    padding-bottom: 4rem;
+  }
+}
 @media (max-width: 400px) {
   .offer {
     padding-bottom: 3.8rem;
@@ -879,11 +900,11 @@ body {
 .slider {
   overflow: hidden;
   padding-top: 100px;
-  padding-bottom: 30px;
+  padding-bottom: 32px;
 }
 @media (max-width: 768px) {
   .slider {
-    max-width: 450px;
+    max-width: 370px;
     margin: 0 auto;
   }
 }
@@ -969,6 +990,11 @@ body {
   opacity: 1;
   transition: 0.3s;
 }
+@media (max-width: 768px) {
+  .swiper-slide_white:hover .swiper-slide__hover {
+    height: 200px;
+  }
+}
 @media (max-width: 500px) {
   .swiper-slide_white:hover .swiper-slide__hover {
     height: auto;
@@ -1005,8 +1031,7 @@ body {
   .swiper-slide-1 {
     width: 209px;
     background-size: 135px;
-    background-position-x: initial;
-    background-position-y: inherit;
+    background-position: center top;
   }
 }
 .swiper-slide-2 {
@@ -1017,6 +1042,11 @@ body {
     background-size: 203px;
   }
 }
+@media (max-width: 500px) {
+  .swiper-slide-2 {
+    background-size: 150px;
+  }
+}
 .swiper-slide-3 {
   background-image: url("../images/steaks.png");
   background-position: right;
@@ -1024,18 +1054,42 @@ body {
 .swiper-slide-4 {
   background-image: url("../images/bottle-milk.png");
 }
+@media (max-width: 500px) {
+  .swiper-slide-4 {
+    width: 209px;
+    background-size: 135px;
+    background-position: center top;
+  }
+}
 .swiper-slide-5 {
   background-image: url("../images/catalog/egg.png");
   background-size: 230px;
+}
+@media (max-width: 500px) {
+  .swiper-slide-5 {
+    background-size: 160px;
+    background-position: center center;
+  }
 }
 .swiper-slide-6 {
   background-image: url("../images/catalog/cheese.png");
   background-size: 230px;
 }
+@media (max-width: 500px) {
+  .swiper-slide-6 {
+    background-size: 160px;
+    background-position: center center;
+  }
+}
 .swiper-slide-7 {
   background-image: url("../images/catalog/yogurt-bluberry.png");
   background-size: 100px;
   background-position: center;
+}
+@media (max-width: 500px) {
+  .swiper-slide-7 {
+    background-size: 60px;
+  }
 }
 .swiper-slide-8 {
   background-image: url("../images/catalog/cottage-cheese.png");
@@ -1046,9 +1100,20 @@ body {
     background-size: 153px;
   }
 }
+@media (max-width: 500px) {
+  .swiper-slide-8 {
+    background-size: 100px;
+  }
+}
 .swiper-slide-9 {
   background-image: url("../images/catalog/mocarela.png");
   background-size: 230px;
+}
+@media (max-width: 500px) {
+  .swiper-slide-9 {
+    background-size: 110px;
+    background-position: center;
+  }
 }
 .swiper-slide__description {
   min-height: 50px;
@@ -1075,14 +1140,14 @@ body {
 @media (max-width: 768px) {
   .swiper-slide__price {
     font-size: 1.8rem;
+    text-align: center;
   }
 }
 @media (max-width: 500px) {
   .swiper-slide__price {
     font-size: 1.75rem;
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 2.6rem;
-    text-align: center;
   }
 }
 .swiper-slide__title {
@@ -1094,8 +1159,8 @@ body {
 }
 @media (max-width: 1280px) {
   .swiper-slide__title {
-    height: 50px;
-    font-size: 2rem;
+    height: 26px;
+    font-size: 2.1rem;
   }
 }
 @media (max-width: 500px) {
@@ -1125,7 +1190,7 @@ body {
 }
 @media (max-width: 768px) {
   .swiper-slide__text {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 }
 @media (max-width: 500px) {
@@ -1378,6 +1443,7 @@ body {
     font-size: 1rem;
     padding: 1.4rem 2.2rem;
     width: 12rem;
+    margin: 0 auto;
   }
 }
 @media (max-width: 500px) {
@@ -1392,6 +1458,17 @@ body {
   padding-bottom: 19rem;
   padding-top: 3.1rem;
 }
+@media (max-width: 900px) {
+  .about {
+    padding-top: 2.7rem;
+    padding-bottom: 10rem;
+  }
+}
+@media (max-width: 768px) {
+  .about {
+    padding-bottom: 8rem;
+  }
+}
 @media (max-width: 400px) {
   .about {
     padding-bottom: 6.5rem;
@@ -1403,6 +1480,11 @@ body {
   justify-content: flex-end;
   gap: 26rem;
   margin-top: 1rem;
+}
+@media (max-width: 1100px) {
+  .about__box {
+    gap: 12rem;
+  }
 }
 @media (max-width: 1000px) {
   .about__box {
@@ -1424,8 +1506,14 @@ body {
   padding-top: 9rem;
   max-width: 60rem;
 }
+@media (max-width: 1100px) {
+  .about__text {
+    padding-top: 1rem;
+  }
+}
 @media (max-width: 768px) {
   .about__text {
+    padding-top: 3rem;
     padding-bottom: 2rem;
   }
 }
@@ -1461,6 +1549,7 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
+  align-items: center;
 }
 .about__item::before {
   content: "";
@@ -1526,6 +1615,16 @@ body {
 .trends {
   margin-bottom: 15.3rem;
 }
+@media (max-width: 1000px) {
+  .trends {
+    margin-bottom: 7rem;
+  }
+}
+@media (max-width: 768px) {
+  .trends {
+    margin-bottom: 6rem;
+  }
+}
 @media (max-width: 400px) {
   .trends {
     margin-bottom: 5.38rem;
@@ -1559,6 +1658,11 @@ body {
   margin-top: 8.8rem;
   margin-bottom: 5rem;
   flex-wrap: wrap;
+}
+@media (max-width: 1000px) {
+  .category {
+    margin-top: 6rem;
+  }
 }
 @media (max-width: 500px) {
   .category {
@@ -1645,6 +1749,11 @@ body {
 
 .catalog {
   margin-bottom: 13.2rem;
+}
+@media (max-width: 900px) {
+  .catalog {
+    margin-bottom: 7rem;
+  }
 }
 @media (max-width: 500px) {
   .catalog {
@@ -1827,6 +1936,16 @@ body {
 .delivery {
   padding-bottom: 17.3rem;
 }
+@media (max-width: 1100px) {
+  .delivery {
+    padding-bottom: 10rem;
+  }
+}
+@media (max-width: 900px) {
+  .delivery {
+    padding-bottom: 5rem;
+  }
+}
 @media (max-width: 500px) {
   .delivery {
     padding-bottom: 0.6rem;
@@ -1932,9 +2051,15 @@ body {
   justify-content: space-around;
   letter-spacing: 0.07px;
 }
+@media (max-width: 1200px) {
+  .delivery__info {
+    gap: 3rem;
+  }
+}
 @media (max-width: 1000px) {
   .delivery__info {
-    gap: 1rem;
+    gap: 2rem;
+    padding-top: 3rem;
   }
 }
 @media (max-width: 768px) {
