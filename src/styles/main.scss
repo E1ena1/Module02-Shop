@@ -737,6 +737,9 @@ body {
             padding: 18px 34px;
             font-size: 1.4rem;
             box-shadow: 0 7px 14.31px 0.69px #d26a22;
+            @media (max-width: $r_tab_900) {
+                padding: 12px 34px;
+            }
         }
         &_max {
             padding: 2.4rem 5.2rem;
@@ -1368,15 +1371,18 @@ body {
     @media (max-width: $r_desk_hd) {
         margin-bottom: 7rem;
     }
+    @media (max-width: $r_tab_900) {
+        margin-bottom: 5rem;
+    }
     @media (max-width: $r_tab) {
-        margin-bottom: 6rem;
+        margin-bottom: 5rem;
     }
     @media (max-width: $r_mob_500) {
         margin-bottom: 5.38rem;
     }
     &__text {
         padding-top: 3rem;
-        @media (max-width: $r_tab) {
+        @media (max-width: $r_tab_900) {
             padding-top: 1rem;
         }
         @media (max-width: $r_mob_400) {
@@ -1403,7 +1409,7 @@ body {
     margin-bottom: 5rem;
     flex-wrap: wrap;
     @media (max-width: $r_desk) {
-        margin-top: 6rem;
+        margin-top: 3rem;
     }
     @media (max-width: $r_mob_500) {
         display: none;
