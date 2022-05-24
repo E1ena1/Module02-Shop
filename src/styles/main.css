@@ -1677,7 +1677,7 @@ body {
     margin-bottom: 6rem;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .trends {
     margin-bottom: 5.38rem;
   }
@@ -2067,9 +2067,9 @@ body {
     padding-top: 1.75rem;
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 400px) {
   .delivery__right-block {
-    padding-top: 1.75rem;
+    padding-top: 0;
   }
 }
 .delivery__payment {
@@ -2236,6 +2236,11 @@ body {
     padding-top: 3.13rem;
   }
 }
+@media (max-width: 400px) {
+  .contact-box__text {
+    padding-top: 1rem;
+  }
+}
 .contact-box__form {
   flex-basis: 587px;
 }
@@ -2263,13 +2268,14 @@ body {
 @media (max-width: 500px) {
   .contact-box__list {
     margin-top: 3rem;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 400px) {
   .contact-box__list {
     flex-direction: column;
     align-items: center;
+    margin-bottom: 2rem;
   }
 }
 .contact-box__list-item {

@@ -1371,7 +1371,7 @@ body {
     @media (max-width: $r_tab) {
         margin-bottom: 6rem;
     }
-    @media (max-width: $r_mob_400) {
+    @media (max-width: $r_mob_500) {
         margin-bottom: 5.38rem;
     }
     &__text {
@@ -1390,9 +1390,6 @@ body {
         @media (max-width: $r_mob_500) {
             padding-top: 42px;
         }
-        //@media (max-width: $r_mob_400) {
-        //    padding-top: 42px;
-        //}
     }
 }
 
@@ -1677,8 +1674,8 @@ body {
         @media (max-width: $r_mob_500) {
             padding-top: 1.75rem;
         }
-        @media (max-width: $r_mob_360) {
-            padding-top: 1.75rem;
+        @media (max-width: $r_mob_400) {
+            padding-top: 0;
         }
     }
     &__payment {
@@ -1807,6 +1804,9 @@ body {
             @media (max-width: $r_mob_500) {
                 padding-top: 3.13rem;
             }
+            @media (max-width: $r_mob_400) {
+                padding-top: 1rem;
+            }
         }
         &__form {
             flex-basis: 587px;
@@ -1827,11 +1827,12 @@ body {
             }
             @media (max-width: $r_mob_500) {
                 margin-top: 3rem;
-                margin-bottom: 5rem;
+                margin-bottom: 4rem;
             }
-            @media (max-width: $r_mob_360) {
+            @media (max-width: $r_mob_400) {
                 flex-direction: column;
                 align-items: center;
+                margin-bottom: 2rem;
             }
             &-item {
                 margin-bottom: 2rem;
