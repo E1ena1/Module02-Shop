@@ -58,13 +58,15 @@ var swiper = new Swiper(".trendsSwiper", {
     breakpoints: {
         320: {
             slidesPerView: 1,
-            slidesPerGroup: 1
+            slidesPerGroup: 1,
+            spaceBetween: 30
         },
         768: {
             slidesPerView: 2,
-            slidesPerGroup: 2
+            slidesPerGroup: 2,
+            spaceBetween: 20
         },
-        1100: {
+        1200: {
             slidesPerView: 3,
             slidesPerGroup: 3
         }

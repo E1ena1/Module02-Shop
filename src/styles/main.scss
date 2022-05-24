@@ -367,7 +367,6 @@ body {
         }
         @media (max-width: $r_desk_1280) {
          width: auto;
-         //height: auto;
          }
         @media (max-width: $r_desk_hd) {
             border: 1px solid transparent;
@@ -495,7 +494,6 @@ body {
         top: -50px;
         left: 681px;
         width: 86px;
-        //height: 92px;
         z-index: -1;
         @media (max-width: $r_desk_1100) {
             top: -52px;
@@ -658,11 +656,15 @@ body {
     }
     &__span {
             font-style: italic;
-
         }
 
     &_block {
-            .title__span {
+        &_desk {
+            @media (max-width: $r_desk){
+                text-align: center;
+            }
+        }
+        .title__span {
                 display: block;
                 line-height: 7rem;
                 @media (max-width: $r_mob_500) {
@@ -675,6 +677,11 @@ body {
 .description {
     line-height: 1.5;
     margin: 0;
+    &_desk {
+        @media (max-width: $r_desk) {
+            text-align: center;
+        }
+    }
     @media (max-width: $r_tab){
         text-align: center;
     }
@@ -718,11 +725,9 @@ body {
     border: none;
     transition: .3s;
     cursor: pointer;
-    @media (max-width: $r_desk_1280) {
-        font-size: 1.4rem;
-    }
     @media (max-width: $r_mob_500) {
         padding: 2rem 3.3rem;
+        letter-spacing: 0.03rem;
     }
     &:hover {
         background-color: $dark-orange;
@@ -753,6 +758,9 @@ body {
     &__text {
         margin-top: 6.1rem;
         max-width: 70rem;
+        @media (max-width:$r_tab) {
+            margin-top: 3rem;
+        }
         @media (max-width: $r_mob_400) {
             margin: 3.1rem auto;
             max-width: 30rem;
@@ -767,6 +775,10 @@ body {
     @media (max-width: $r_tab) {
         max-width: 370px;
         margin: 0 auto;
+    }
+    @media (max-width: $r_mob_500) {
+        max-width: 230px;
+        padding-top: 40px;
     }
     @media (max-width: $r_mob_400) {
         padding-top: 2.25rem;
@@ -811,7 +823,6 @@ body {
             background-position-y: inherit;
             padding: 2rem 5rem;
         }
-
         &_white {
             height: 518px;
             display: flex;
@@ -864,6 +875,18 @@ body {
         }
         &-1 {
             background-image: url("../images/bottle-milk.png");
+            @media (max-width: $r_desk_1350) {
+                background-size: 100%;
+            }
+            @media (max-width:$r_desk_1100) {
+                background-size: 300px;
+            }
+            @media (max-width: $r_tab) {
+                background-size: 255px;
+            }
+            @media (max-width: $r_mob_600) {
+                background-size: 235px;
+            }
             @media (max-width: $r_mob_500) {
                 width: 209px;
                 background-size: 135px;
@@ -872,6 +895,12 @@ body {
         }
         &-2 {
             background-image: url("../images/pasta.png");
+            @media (max-width: $r_desk_1350) {
+                background-size: 100%;
+            }
+            @media (max-width:$r_desk_1100) {
+                background-size: 300px;
+            }
             @media (max-width: $r_tab) {
                 background-size: 203px;
             }
@@ -882,55 +911,16 @@ body {
         &-3 {
             background-image: url("../images/steaks.png");
             background-position: right;
-        }
-        &-4 {
-            background-image: url("../images/bottle-milk.png");
+            @media (max-width: $r_desk_1350) {
+                background-size: 100%;
+            }
+            @media (max-width: $r_tab_900) {
+                background-size: 380px;
+            }
             @media (max-width: $r_mob_500) {
                 width: 209px;
-                background-size: 135px;
-                background-position: center top;
-            }
-        }
-        &-5 {
-            background-image: url("../images/catalog/egg.png");
-            background-size: 230px;
-            @media (max-width: $r_mob_500) {
-                background-size: 160px;
-                background-position: center center;
-            }
-        }
-        &-6 {
-            background-image: url("../images/catalog/cheese.png");
-            background-size: 230px;
-            @media (max-width: $r_mob_500) {
-                background-size: 160px;
-                background-position: center center;
-            }
-        }
-        &-7 {
-            background-image: url("../images/catalog/yogurt-bluberry.png");
-            background-size: 100px;
-            background-position: center;
-            @media (max-width: $r_mob_500) {
-                background-size: 60px;
-            }
-        }
-        &-8 {
-            background-image: url("../images/catalog/cottage-cheese.png");
-            background-size: 230px;
-            @media (max-width: $r_tab) {
-                background-size: 153px;
-            }
-            @media (max-width: $r_mob_500) {
-                background-size: 100px;
-            }
-        }
-        &-9 {
-            background-image: url("../images/catalog/mocarela.png");
-            background-size: 230px;
-            @media (max-width: $r_mob_500) {
-                background-size: 110px;
-                background-position: center;
+                background-size: 204px;
+                background-position: right top;
             }
         }
         &__description {
@@ -938,9 +928,13 @@ body {
             max-width: 297px;
             line-height: 2.5rem;
             letter-spacing: .05rem;
+            @media (max-width: $r_desk_hd) {
+                margin: 1rem auto;
+                text-align: center;
+            }
             @media (max-width: $r_tab) {
                 font-size: 1.6rem;
-                text-align: center;
+
             }
             @media (max-width: $r_mob_500) {
                 font-size: 1.2rem;
@@ -950,6 +944,10 @@ body {
         &__price {
             font-size: 2.4rem;
             margin-bottom: 3.4rem;
+            @media (max-width: $r_desk_hd) {
+                text-align: center;
+                margin: 0 0 1rem 0;
+            }
             @media (max-width: $r_tab) {
                 font-size: 1.8rem;
                 text-align: center;
@@ -968,7 +966,17 @@ body {
             margin-bottom: 0;
             @media (max-width: $r_desk_1280) {
                 height: 26px;
-                font-size: 2.1rem;
+            }
+            @media (max-width: $r_desk_1100) {
+                font-size: 2.5rem;
+            }
+            @media (max-width: $r_desk_hd) {
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+            @media (max-width: $r_tab) {
+                font-size: 2rem;
+                margin-bottom: 0.5rem;
             }
             @media (max-width: $r_mob_500) {
                 font-size: 1.75rem;
@@ -991,6 +999,10 @@ body {
             max-width: 263px;
             margin-top: 2.5rem;
             margin-bottom: 3.4rem;
+            @media (max-width: $r_desk_hd) {
+                margin: 1rem auto;
+                text-align: center;
+            }
             @media (max-width: $r_tab) {
                 font-size: 1.3rem;
             }
@@ -1009,6 +1021,10 @@ body {
             gap: 2rem;
             align-items: center;
             transition: .3s;
+            @media (max-width: $r_desk_hd) {
+                margin: 0 auto;
+                justify-content: center;
+            }
             @media (max-width: $r_tab) {
                 font-size: 1rem;
                 gap: 1rem;
@@ -1049,7 +1065,7 @@ body {
                 height: 280px;
             }
             @media (max-width: $r_desk_1280) {
-                height: 280px;
+                height: 275px;
             }
             @media (max-width: $r_desk_1100) {
                 height: 203px;
@@ -1090,9 +1106,6 @@ body {
         &::after {
             display: none;
         }
-        //@media (max-width: $r_mob_500) {
-        //    display: none;
-        //}
     }
     &-button-prev {
         left: initial;
@@ -1154,7 +1167,7 @@ body {
         padding: 0;
         background-repeat: no-repeat;
         background-position: center center;
-        @media (max-width: $r_desk_1350) {
+        @media (max-width: $r_desk_1400) {
             width: 40px;
             height: 40px;
         }
@@ -1184,24 +1197,17 @@ body {
         width: 46px;
         border: none;
         padding: 0;
-        @media (max-width: $r_desk_1400) {
-            width: 25px;
-        }
         &_min {
             width: 3.3rem;
+        }
+        @media (max-width: $r_desk_1400) {
+            width: 25px;
         }
     }
     & + .link {
         text-align: center;
-        @media (max-width: $r_desk_1400) {
-            padding: 2rem 3rem;
-        }
-        @media (max-width: $r_desk_1280) {
-            padding: 2rem 3rem;
-        }
         @media (max-width: $r_desk_1100) {
             font-size: 1.5rem;
-            padding: 1.5rem 2.5rem;
         }
         @media (max-width: $r_tab) {
             font-size: 1rem;
@@ -1220,9 +1226,11 @@ body {
 .about {
     padding-bottom: 19rem;
     padding-top: 3.1rem;
+    @media (max-width: $r_desk_1400) {
+        padding-bottom: 10rem;
+    }
     @media (max-width: $r_tab_900) {
         padding-top: 2.7rem;
-        padding-bottom: 10rem;
     }
     @media (max-width: $r_tab) {
         padding-bottom: 8rem;
@@ -1236,6 +1244,10 @@ body {
         justify-content: flex-end;
         gap: 26rem;
         margin-top: 1rem;
+        @media (max-width: $r_desk_1400) {
+            gap: 0;
+            justify-content: space-around;
+        }
         @media (max-width: $r_desk_1100) {
             gap: 12rem;
         }
@@ -1254,11 +1266,13 @@ body {
     &__text {
         padding-top: 9rem;
         max-width: 60rem;
+        @media (max-width: $r_desk_1400) {
+            padding-top: 4rem;
+        }
         @media (max-width: $r_desk_1100) {
             padding-top: 1rem;
         }
         @media (max-width: $r_tab) {
-            padding-top: 3rem;
             padding-bottom: 2rem;
         }
         @media (max-width: $r_mob_400) {
@@ -1316,6 +1330,9 @@ body {
         }
         &_traditions {
             margin-left: 9rem;
+            @media (max-width: $r_desk_1280) {
+                margin-left: 2rem;
+            }
             @media (max-width: $r_tab_900) {
                 margin-left: 1rem;
             }
@@ -1329,6 +1346,9 @@ body {
         }
         &_goods {
             margin-left: 7.1rem;
+            @media (max-width: $r_desk_1280) {
+                margin-left: 2rem;
+            }
             @media (max-width: $r_tab_900) {
                 margin-left: 1rem;
             }
@@ -1345,7 +1365,7 @@ body {
 
 .trends {
     margin-bottom: 15.3rem;
-    @media (max-width: $r_desk) {
+    @media (max-width: $r_desk_hd) {
         margin-bottom: 7rem;
     }
     @media (max-width: $r_tab) {
@@ -1356,6 +1376,9 @@ body {
     }
     &__text {
         padding-top: 3rem;
+        @media (max-width: $r_tab) {
+            padding-top: 1rem;
+        }
         @media (max-width: $r_mob_400) {
             max-width: 230px;
             margin: 0 auto;
@@ -1364,9 +1387,12 @@ body {
     }
     &__slider {
         padding-top: 84px;
-        @media (max-width: $r_mob_400) {
+        @media (max-width: $r_mob_500) {
             padding-top: 42px;
         }
+        //@media (max-width: $r_mob_400) {
+        //    padding-top: 42px;
+        //}
     }
 }
 
@@ -1388,6 +1414,7 @@ body {
     @media (max-width: $r_tab) {
         gap: 1.5rem;
         justify-content: center;
+        margin-top: 3rem;
     }
     @media (max-width: $r_mob_500) {
         margin-top: 5rem;
@@ -1426,7 +1453,7 @@ body {
             display: block;
             text-align: center;
             margin-top: 5.13rem;
-            margin-bottom: 2.25rem;
+            margin-bottom: 2.35rem;
         }
         &__link {
             color: $green;
@@ -1497,7 +1524,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    @media (max-width: $r_desk_1350) {
+    @media (max-width: $r_desk_1500) {
         grid-template-columns: repeat(3, 1fr);
     }
     @media (max-width: $r_desk_1100) {
@@ -1510,6 +1537,9 @@ body {
         border: 1px solid rgba($green, .4);
         border-radius: 4%;
         padding: 30px 30px 40px 30px;
+        @media (max-width: $r_desk_1400) {
+            padding: 40px;
+        }
         @media (max-width: $r_tab) {
             padding: 10px;
         }
@@ -1543,6 +1573,9 @@ body {
         font-family: $font-cormorant;
         font-weight: 700;
         margin: 0;
+        @media (max-width: $r_desk_1500) {
+            text-align: center;
+        }
         @media (max-width: $r_tab) {
             font-size: 2rem;
             height: 30px;
@@ -1556,9 +1589,12 @@ body {
         color: rgba(39, 48, 15, 0.7);
         max-width: 242px;
         line-height: 2.3rem;
+        @media (max-width: $r_desk_1500) {
+            margin: 1rem auto;
+            text-align: center;
+        }
         @media (max-width: $r_tab) {
             height: 60px;
-            margin: 0;
         }
         @media (max-width: $r_mob_600) {
             font-size: 1.5rem;
@@ -1588,6 +1624,9 @@ body {
     &__price {
         font-size: 2.4rem;
         margin: 0;
+        @media (max-width: $r_desk_1500) {
+            text-align: center;
+        }
         @media (max-width: $r_tab) {
             font-size: 1.8rem;
         }
@@ -1605,6 +1644,9 @@ body {
     }
     @media (max-width: $r_tab_900) {
         padding-bottom: 5rem;
+    }
+    @media (max-width: $r_tab) {
+        padding-bottom: 1rem;
     }
     @media (max-width: $r_mob_500) {
         padding-bottom: 0.6rem;
@@ -1633,7 +1675,10 @@ body {
             max-width: inherit;
         }
         @media (max-width: $r_mob_500) {
-            padding-top: 3.75rem;
+            padding-top: 1.75rem;
+        }
+        @media (max-width: $r_mob_360) {
+            padding-top: 1.75rem;
         }
     }
     &__payment {
@@ -1717,8 +1762,13 @@ body {
 
 .contact {
     margin-bottom: 16rem;
-    @media (max-width: $r_mob_500) {
+    @media (max-width: $r_desk_1280) {
+        margin-bottom: 10rem;
+    }
+    @media (max-width: $r_desk) {
         margin-bottom: 0;
+    }
+    @media (max-width: $r_mob_500) {
         padding-bottom: 7.63rem;
     }
     &-box {
@@ -1734,11 +1784,20 @@ body {
         }
         &__item {
             padding-top: 2.2rem;
+            @media (max-width: $r_mob_400) {
+                padding-top: 1rem;
+            }
         }
         &__text {
             max-width: 400px;
             flex-grow: 1;
             margin: 64px 0 0 120px;
+            @media (max-width: $r_desk_1280) {
+                margin: 52px 0 0 64px;
+            }
+            @media (max-width: $r_desk_hd) {
+                margin: 30px 0 0 50px;
+            }
             @media (max-width: $r_desk) {
                 margin: 0;
             }
@@ -1759,9 +1818,12 @@ body {
             padding-left: 0;
             list-style-type: none;
             margin-top: 6rem;
-            @media (max-width: $r_tab) {
+            @media (max-width: $r_desk_hd) {
+                margin-top: 4rem;
+            }
+            @media (max-width: $r_desk) {
                 display: flex;
-                justify-content: space-between;
+                justify-content: space-around;
             }
             @media (max-width: $r_mob_500) {
                 margin-top: 3rem;
@@ -1782,7 +1844,7 @@ body {
             text-decoration: none;
             color: $green;
             font-weight: 500;
-            @media (max-width: $r_tab) {
+            @media (max-width: $r_desk) {
                 gap: 10px;
                 font-size: 1.8rem;
             }
@@ -1797,7 +1859,7 @@ body {
                 width: 30px;
                 height: 30px;
                 display: block;
-                @media (max-width: $r_tab) {
+                @media (max-width: $r_desk) {
                     width: 20px;
                     height: 20px;
                 }
@@ -1807,6 +1869,9 @@ body {
             &::before {
                 background-image: url("../images/phone.svg");
                 background-size: 30px 30px;
+                @media (max-width: $r_desk) {
+                    background-size: 20px 20px;
+                }
                 @media (max-width: $r_tab) {
                     background-size: 18px 18px;
                 }
@@ -1816,6 +1881,9 @@ body {
             &::before {
                 background-image: url("../images/mail.svg");
                 background-size: 30px 30px;
+                @media (max-width: $r_desk) {
+                    background-size: 20px 20px;
+                }
                 @media (max-width: $r_tab) {
                     background-size: 18px 18px;
                 }
