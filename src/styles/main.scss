@@ -1455,7 +1455,7 @@ body {
         @media (max-width: $r_mob_500) {
             display: block;
             text-align: center;
-            margin-top: 5.13rem;
+            margin-top: 4.13rem;
             margin-bottom: 2.35rem;
         }
         &__link {
@@ -1469,7 +1469,7 @@ body {
             transition: .3s;
             flex-basis: 120px;
             margin-right: 0;
-            @media (max-width: $r_mob_400) {
+            @media (max-width: $r_mob_500) {
                 font-size: 1.25rem;
                 flex-basis: 110px;
                 padding: 1.75rem 0;

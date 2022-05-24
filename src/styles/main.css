@@ -1787,7 +1787,7 @@ body {
   .category-swiper {
     display: block;
     text-align: center;
-    margin-top: 5.13rem;
+    margin-top: 4.13rem;
     margin-bottom: 2.35rem;
   }
 }
@@ -1803,7 +1803,7 @@ body {
   flex-basis: 120px;
   margin-right: 0;
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .category-swiper__link {
     font-size: 1.25rem;
     flex-basis: 110px;
