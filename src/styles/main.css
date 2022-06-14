@@ -623,9 +623,32 @@ body {
   box-shadow: 0 7px 32px 8px rgba(71, 90, 67, 0.1);
   visibility: hidden;
 }
+.main__about_1 {
+  top: 115px;
+  left: -21px;
+}
+@media (max-width: 1350px) {
+  .main__about_1 {
+    top: 84px;
+  }
+}
 .main__about_2 {
   top: 261px;
   right: -111px;
+}
+@media (max-width: 1700px) {
+  .main__about_2 {
+    right: -3px;
+  }
+}
+@media (max-width: 1350px) {
+  .main__about_2 {
+    top: 172px;
+  }
+}
+.main__about_3 {
+  bottom: 35px;
+  right: 261px;
 }
 .main__title {
   margin: 24px 20px 10px 20px;

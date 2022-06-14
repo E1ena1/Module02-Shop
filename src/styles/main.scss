@@ -559,9 +559,26 @@ body {
         width: 218px;
         box-shadow: 0 7px 32px 8px rgb(71 90 67 / 10%);
         visibility: hidden;
+        &_1 {
+            top: 115px;
+            left: -21px;
+            @media (max-width: 1350px) {
+                top: 84px;
+            }
+        }
         &_2 {
             top: 261px;
             right: -111px;
+            @media (max-width: $r_desk_1700) {
+                right: -3px;
+            }
+            @media (max-width: 1350px) {
+                top: 172px;
+            }
+        }
+        &_3 {
+            bottom: 35px;
+            right: 261px;
         }
     }
     &__title {

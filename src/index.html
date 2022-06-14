@@ -80,9 +80,15 @@
                            <img class="main__image" src="images/plate.png" alt="Здоровая еда">
                        </div>
                    </div>
-                   <button class="main__btn main__btn_1" type="button">
+                   <button class="main__btn main__btn_1" type="button" onclick="document.getElementById('FoodOne').style.visibility = 'visible'">
                        <span class="main__food">Авокадо</span> 134 руб
                    </button>
+                   <div class="main__about main__about_1" id="FoodOne">
+                       <h3 class="main__title">Авокадо</h3>
+                       <p class="main__description">Авокадо Молодой, Свежий урожай, 1кг</p>
+                       <p class="main__price">134 руб/кг</p>
+                       <button type="button" class="close" onclick="document.getElementById('FoodOne').style.visibility = 'hidden'"></button>
+                   </div>
                    <button class="main__btn main__btn_2" type="button" onclick="document.getElementById('FoodTwo').style.visibility = 'visible'">
                        <span class="main__food">Картофель</span> 169 руб
                    </button>
@@ -92,9 +98,15 @@
                        <p class="main__price">169 руб/кг</p>
                        <button type="button" class="close" onclick="document.getElementById('FoodTwo').style.visibility = 'hidden'"></button>
                    </div>
-                   <button class="main__btn main__btn_3" type="button">
+                   <button class="main__btn main__btn_3" type="button" onclick="document.getElementById('FoodThree').style.visibility = 'visible'">
                        <span class="main__food">Томаты</span> 215 руб
                    </button>
+                   <div class="main__about main__about_3" id="FoodThree">
+                       <h3 class="main__title">Томаты</h3>
+                       <p class="main__description">Томаты крассные, Свежий урожай, 1кг</p>
+                       <p class="main__price">215 руб/кг</p>
+                       <button type="button" class="close" onclick="document.getElementById('FoodThree').style.visibility = 'hidden'"></button>
+                   </div>
                </div>
            </div>
        </div>
