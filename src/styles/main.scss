@@ -221,8 +221,13 @@ body {
         padding: 10px;
         border-radius: 20px;
         width: 253px;
-        box-shadow: 0px 7px 32px 8px rgba(71,90,67,0.1);
-        //box-shadow: -5px 0px 1px 14px rgb(71 90 67 / 10%);
+        box-shadow: 0 7px 32px 8px rgba(71,90,67,0.1);
+        @media (max-width: $r_desk) {
+            right: -11px;
+        }
+        @media (max-width: $r_mob_500) {
+            top: 53px;
+        }
         &::after {
             content: "";
             border: 17px solid transparent;
@@ -230,6 +235,9 @@ body {
             position: absolute;
             top: -28px;
             right: 43px;
+            @media (max-width: $r_desk) {
+                right: 12px;
+            }
         }
     }
     &__cover {

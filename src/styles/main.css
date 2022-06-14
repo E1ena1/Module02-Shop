@@ -230,7 +230,17 @@ body {
   padding: 10px;
   border-radius: 20px;
   width: 253px;
-  box-shadow: 0px 7px 32px 8px rgba(71, 90, 67, 0.1);
+  box-shadow: 0 7px 32px 8px rgba(71, 90, 67, 0.1);
+}
+@media (max-width: 1000px) {
+  .header__dropdown {
+    right: -11px;
+  }
+}
+@media (max-width: 500px) {
+  .header__dropdown {
+    top: 53px;
+  }
 }
 .header__dropdown::after {
   content: "";
@@ -239,6 +249,11 @@ body {
   position: absolute;
   top: -28px;
   right: 43px;
+}
+@media (max-width: 1000px) {
+  .header__dropdown::after {
+    right: 12px;
+  }
 }
 .header__cover {
   position: relative;
