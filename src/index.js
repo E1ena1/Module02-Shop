@@ -82,4 +82,10 @@ var swiper = new Swiper(".categorySwiper", {
     },
 });
 
+//dropdown
+
+function closeModal() {
+    document.getElementById('dropdown').style.top = '400px';
+}
+
 AOS.init();
