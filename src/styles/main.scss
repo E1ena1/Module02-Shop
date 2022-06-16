@@ -457,7 +457,7 @@ body {
         @media (max-width: $r_tab) {
             display: block;
             max-width: 300px;
-            margin: 0 auto;
+            margin: 21px auto 0;
             width: 92%;
             border-radius: 100%;
             -webkit-animation: shadow 5s infinite;
@@ -835,7 +835,7 @@ body {
     text-transform: uppercase;
     padding: 2.4rem 4.2rem;
     background-color: $orange;
-    box-shadow: 0px 8px 15px 0px #d26a22;
+    box-shadow: 0 8px 15px 0 #d26a22;
     text-decoration: none;
     border-radius: 3.9rem;
     display: inline-block;
@@ -843,6 +843,9 @@ body {
     border: none;
     transition: .3s;
     cursor: pointer;
+    @media (max-width: $r_desk_1500) {
+        box-shadow: 0 2px 4px 0 #d26a22;
+    }
     @media (max-width: $r_mob_500) {
         padding: 2rem 3.3rem;
         letter-spacing: 0.03rem;
@@ -1392,6 +1395,9 @@ body {
         padding-top: 9rem;
         padding-left: 120px;
         width: fit-content;
+        @media (max-width: $r_desk_1500) {
+            padding-left: 0;
+        }
         @media (max-width: $r_desk_1400) {
             padding-top: 4rem;
         }
@@ -1417,6 +1423,9 @@ body {
         font-style: italic;
         font-weight: 700;
         margin: 6rem 0 0 0;
+        @media (max-width: $r_desk_1400) {
+            margin: 0;
+        }
         @media (max-width: $r_tab) {
             justify-content: center;
         }
@@ -1623,6 +1632,7 @@ body {
         margin: 6rem auto;
         text-transform: uppercase;
         align-items: center;
+        cursor: pointer;
         @media (max-width: $r_mob_500) {
             font-size: 1.25rem;
             margin: 5rem auto;
