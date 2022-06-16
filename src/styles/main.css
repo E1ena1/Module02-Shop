@@ -1091,6 +1091,7 @@ body {
   position: relative;
   z-index: 0;
   transition: 0.3s;
+  overflow: hidden;
 }
 @media (max-width: 1280px) {
   .swiper-slide {
@@ -1584,6 +1585,9 @@ body {
   border: none;
   padding: 0;
 }
+.counter__input:focus {
+  outline: none;
+}
 .counter__input_min {
   width: 3.3rem;
 }
@@ -1644,8 +1648,8 @@ body {
 .about__box {
   display: flex;
   justify-content: flex-end;
-  gap: 26rem;
-  margin-top: 1rem;
+  gap: 17rem;
+  margin-top: 6px;
 }
 @media (max-width: 1400px) {
   .about__box {
@@ -1676,7 +1680,8 @@ body {
 }
 .about__text {
   padding-top: 9rem;
-  max-width: 60rem;
+  padding-left: 120px;
+  width: fit-content;
 }
 @media (max-width: 1400px) {
   .about__text {
@@ -1708,7 +1713,7 @@ body {
   font-size: 3rem;
   font-style: italic;
   font-weight: 700;
-  margin: 0;
+  margin: 6rem 0 0 0;
 }
 @media (max-width: 768px) {
   .about__list {
@@ -1754,7 +1759,7 @@ body {
   }
 }
 .about__item_traditions {
-  margin-left: 9rem;
+  margin-left: 87px;
 }
 @media (max-width: 1280px) {
   .about__item_traditions {
@@ -1776,7 +1781,7 @@ body {
   }
 }
 .about__item_goods {
-  margin-left: 7.1rem;
+  margin-left: 83px;
 }
 @media (max-width: 1280px) {
   .about__item_goods {
@@ -2151,7 +2156,7 @@ body {
 }
 
 .delivery {
-  padding-bottom: 17.3rem;
+  padding-bottom: 17.6rem;
 }
 @media (max-width: 1100px) {
   .delivery {
@@ -2579,17 +2584,18 @@ body {
 .footer__box {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 5rem;
+  margin-bottom: 4.5rem;
 }
 @media (max-width: 1200px) {
   .footer__box {
-    gap: 2rem;
+    gap: 12rem;
   }
 }
 @media (max-width: 900px) {
   .footer__box {
     flex-direction: column;
     align-items: center;
+    gap: 7rem;
   }
 }
 @media (max-width: 768px) {
@@ -2607,7 +2613,7 @@ body {
 .footer__info {
   display: flex;
   justify-content: space-between;
-  flex-basis: 96rem;
+  flex-basis: 953px;
 }
 @media (max-width: 900px) {
   .footer__info {
@@ -2655,9 +2661,9 @@ body {
   }
 }
 .footer-social {
-  padding-left: 0;
+  padding-left: 5px;
   display: flex;
-  gap: 3.3rem;
+  gap: 3.1rem;
 }
 @media (max-width: 500px) {
   .footer-social {
@@ -2671,12 +2677,12 @@ body {
   height: 45px;
   border-radius: 100%;
   border: 2px solid rgba(39, 48, 15, 0.8);
+  background-size: 24px 20px;
   background-repeat: no-repeat;
   background-position: center center;
 }
 .footer-social__vk {
   background-image: url("../images/vk.svg");
-  background-size: 30px 30px;
   opacity: 0.8;
   transition: 0.3s;
 }
@@ -2690,7 +2696,6 @@ body {
 }
 .footer-social__inst {
   background-image: url("../images/instagram.svg");
-  background-size: 20px 20px;
   opacity: 0.8;
   transition: 0.3s;
 }
@@ -2704,7 +2709,6 @@ body {
 }
 .footer-social__fb {
   background-image: url("../images/facebook.svg");
-  background-size: 15px 20px;
   opacity: 0.8;
   transition: 0.3s;
 }
