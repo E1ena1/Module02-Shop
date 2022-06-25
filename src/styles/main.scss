@@ -835,6 +835,12 @@ body {
             padding-bottom: 2.63rem;
         }
     }
+    &_center {
+        @media (max-width: $r_tab_900) {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
 }
 
 .link {
@@ -853,6 +859,9 @@ body {
     @media (max-width: $r_desk_1500) {
         box-shadow: 0 2px 4px 0 #d26a22;
     }
+    @media (max-width: $r_tab) {
+        box-shadow: none;
+    }
     @media (max-width: $r_mob_500) {
         padding: 2rem 3.3rem;
         letter-spacing: 0.03rem;
@@ -868,9 +877,15 @@ body {
             @media (max-width: $r_tab_900) {
                 padding: 12px 34px;
             }
+            @media (max-width: $r_tab) {
+                box-shadow: none;
+            }
         }
         &_max {
             padding: 2.4rem 5.2rem;
+            @media (max-width: $r_tab_900) {
+                padding: 2.4rem 4.2rem;
+            }
         }
     }
 
@@ -1384,17 +1399,19 @@ body {
             justify-content: space-around;
         }
         @media (max-width: $r_desk_1100) {
-            gap: 12rem;
+            //gap: 12rem;
         }
         @media (max-width: $r_desk) {
-            gap: 6rem;
+            //gap: 6rem;
         }
         @media (max-width: $r_tab_900) {
-            gap: 3rem;
-        }
-        @media (max-width: $r_tab) {
+            //gap: 3rem;
             flex-direction: column;
             gap: 0;
+        }
+        @media (max-width: $r_tab) {
+            //flex-direction: column;
+            //gap: 0;
         }
     }
 
@@ -1413,6 +1430,8 @@ body {
         }
         @media (max-width: $r_tab) {
             padding-bottom: 2rem;
+            max-width: 500px;
+            margin: 0 auto;
         }
         @media (max-width: $r_mob_400) {
             padding-top: 2rem;
@@ -1433,8 +1452,9 @@ body {
         @media (max-width: $r_desk_1400) {
             margin: 0;
         }
-        @media (max-width: $r_tab) {
+        @media (max-width: $r_tab_900) {
             justify-content: center;
+            gap: 1rem;
         }
         @media (max-width: $r_mob_400) {
             font-size: 1.75rem;
@@ -1696,9 +1716,9 @@ body {
         width: 22rem;
         text-align: center;
         margin: 0 auto;
-        @media (max-width: $r_mob_600) {
+        @media (max-width: $r_tab) {
             height: 15rem;
-            width:  20rem;
+            width:  13rem;
         }
         @media (max-width: $r_mob_500) {
             height: 8.13rem;
