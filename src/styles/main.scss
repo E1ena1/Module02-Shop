@@ -21,6 +21,7 @@ $r_desk_1280: 1280px;
 $r_desk_1350: 1350px;
 $r_desk_1400: 1400px;
 $r_desk_1500: 1500px;
+$r_desk_1550: 1550px;
 $r_desk_1600: 1600px;
 $r_desk_1700: 1700px;
 
@@ -225,6 +226,9 @@ body {
         border-radius: 20px;
         width: 253px;
         box-shadow: 0 7px 32px 8px rgba(71,90,67,0.1);
+        @media (max-width: $r_desk_1550) {
+            right: -10px;
+        }
         @media (max-width: $r_desk) {
             right: -11px;
         }
@@ -238,7 +242,7 @@ body {
             position: absolute;
             top: -28px;
             right: 43px;
-            @media (max-width: $r_desk) {
+            @media (max-width: $r_desk_1550) {
                 right: 12px;
             }
         }
@@ -1243,7 +1247,7 @@ body {
         width: 20px;
         height: 20px;
         right: 72px;
-        @media (max-width: $r_mob_500) {
+        @media (max-width: $r_tab) {
             display: none;
         }
     }
@@ -1254,14 +1258,14 @@ body {
         width: 20px;
         height: 20px;
         right: -9px;
-        @media (max-width: $r_mob_500) {
+        @media (max-width: $r_tab) {
             display: none;
         }
     }
 }
 
 .swiper-horizontal>.swiper-pagination-bullets {
-    @media (max-width: $r_mob_500) {
+    @media (max-width: $r_tab) {
         display: block;
         bottom: -30px;
     }
@@ -1376,7 +1380,7 @@ body {
         gap: 17rem;
         margin-top: 6px;
         @media (max-width: $r_desk_1400) {
-            gap: 0;
+            gap: 3rem;
             justify-content: space-around;
         }
         @media (max-width: $r_desk_1100) {
