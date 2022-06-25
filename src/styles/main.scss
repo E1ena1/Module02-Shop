@@ -52,6 +52,9 @@ body {
     display: flex;
     align-items: center;
     gap: 12rem;
+    @media (max-width: $r_desk_1600) {
+        justify-content: space-between;
+    }
     @media (max-width: $r_desk_1500) {
         gap: 8rem;
     }
@@ -656,9 +659,9 @@ body {
             height: 160px;
         }
         @media (max-width: $r_desk_1100) {
-            top: 45px;
-            width: 140px;
-            height: 120px;
+            top: 92px;
+            width: 128px;
+            height: 116px;
         }
         @media (max-width: $r_desk) {
             top: 97px;

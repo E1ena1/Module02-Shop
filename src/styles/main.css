@@ -31,6 +31,11 @@ body {
   align-items: center;
   gap: 12rem;
 }
+@media (max-width: 1600px) {
+  .header {
+    justify-content: space-between;
+  }
+}
 @media (max-width: 1500px) {
   .header {
     gap: 8rem;
@@ -746,9 +751,9 @@ body {
 }
 @media (max-width: 1100px) {
   .main__avocado {
-    top: 45px;
-    width: 140px;
-    height: 120px;
+    top: 92px;
+    width: 128px;
+    height: 116px;
   }
 }
 @media (max-width: 1000px) {
