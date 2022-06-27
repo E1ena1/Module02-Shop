@@ -835,12 +835,6 @@ body {
             padding-bottom: 2.63rem;
         }
     }
-    &_center {
-        @media (max-width: $r_tab_900) {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-    }
 }
 
 .link {
@@ -1375,7 +1369,7 @@ body {
 
 .about {
     padding-bottom: 19rem;
-    padding-top: 3.1rem;
+    padding-top: 2.6rem;
     @media (max-width: $r_desk_1400) {
         padding-bottom: 10rem;
     }
@@ -1392,7 +1386,7 @@ body {
     &__box {
         display: flex;
         justify-content: flex-end;
-        gap: 17rem;
+        gap: 18.3rem;
         margin-top: 6px;
         @media (max-width: $r_desk_1400) {
             gap: 3rem;
@@ -1405,13 +1399,8 @@ body {
             //gap: 6rem;
         }
         @media (max-width: $r_tab_900) {
-            //gap: 3rem;
             flex-direction: column;
             gap: 0;
-        }
-        @media (max-width: $r_tab) {
-            //flex-direction: column;
-            //gap: 0;
         }
     }
 
@@ -1448,17 +1437,19 @@ body {
         font-size: 3rem;
         font-style: italic;
         font-weight: 700;
-        margin: 6rem 0 0 0;
+        margin: 6.6rem 0 0 0;
         @media (max-width: $r_desk_1400) {
             margin: 0;
         }
         @media (max-width: $r_tab_900) {
             justify-content: center;
-            gap: 1rem;
+            gap: 2rem;
+            margin-top: 20px;
         }
         @media (max-width: $r_mob_400) {
             font-size: 1.75rem;
             gap: 4rem;
+            margin: 0;
         }
     }
     &__item {
@@ -1523,10 +1514,16 @@ body {
             }
         }
     }
+    &__description {
+        max-width: 670px;
+        @media (max-width: $r_tab_900) {
+            max-width: 100%;
+        }
+    }
 }
 
 .trends {
-    margin-bottom: 15.3rem;
+    margin-bottom: 15rem;
     @media (max-width: $r_desk_hd) {
         margin-bottom: 7rem;
     }
@@ -1537,7 +1534,7 @@ body {
         margin-bottom: 5rem;
     }
     @media (max-width: $r_mob_500) {
-        margin-bottom: 5.38rem;
+        margin-bottom: 48px;
     }
     &__text {
         padding-top: 3rem;
@@ -1556,6 +1553,12 @@ body {
             padding-top: 42px;
         }
     }
+    &__description {
+        @media (max-width: $r_tab) {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+    }
 }
 
 .category {
@@ -1564,7 +1567,7 @@ body {
     display: flex;
     align-items: center;
     gap: 2rem;
-    margin-top: 8.8rem;
+    margin-top: 8.3rem;
     margin-bottom: 5rem;
     flex-wrap: wrap;
     @media (max-width: $r_desk) {
@@ -1614,7 +1617,7 @@ body {
         @media (max-width: $r_mob_500) {
             display: block;
             text-align: center;
-            margin-top: 4.13rem;
+            margin-top: 5rem;
             margin-bottom: 2.35rem;
         }
         &__link {
@@ -1699,7 +1702,7 @@ body {
     &__item {
         border: 1px solid rgba($green, .4);
         border-radius: 4%;
-        padding: 30px 30px 40px 30px;
+        padding: 32px 30px 43px 30px;
         @media (max-width: $r_desk_1400) {
             padding: 40px;
         }
@@ -1916,6 +1919,7 @@ body {
         }
         @media (max-width: $r_mob_500) {
             padding-top: 3.88rem;
+            gap: 5rem;
         }
     }
     &__discount {
@@ -1948,7 +1952,7 @@ body {
         &__item {
             padding-top: 2.2rem;
             @media (max-width: $r_mob_400) {
-                padding-top: 1rem;
+                padding-top: 1.5rem;
             }
         }
         &__text {
@@ -1971,7 +1975,7 @@ body {
                 padding-top: 3.13rem;
             }
             @media (max-width: $r_mob_400) {
-                padding-top: 1rem;
+                padding-top: 3.6rem;
             }
         }
         &__form {
